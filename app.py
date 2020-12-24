@@ -84,6 +84,10 @@ def productdetail():
     return render_template('product-detail.html')
 
 
+@app.route('/grid/')
+def grid():
+    return render_template('grid.html')
+
 
 @app.route('/wishlist/')
 def wishlist():
