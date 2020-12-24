@@ -129,8 +129,13 @@
                                                         <li><a href="wishlist.html" title="Wishlist">Wishlist</a></li>
                                                         <li><a href="checkout.html" title="Checkout">Checkout</a></li>
                                                         <li><a href="blog.html" title="Blog"><span>Blog</span></a></li>
-                                                        <li class="last"><a href="login.html"
+                                                        {% if user %}
+                                                        <li class="last"><a href={{url_for('logout')}}
+                                                                 title="Logout"><span>Logout</span></a></li>
+                                                        {% else %}
+                                                        <li class="last"><a href={{url_for('login')}}
                                                                 title="Login"><span>Login</span></a></li>
+                                                        {% endif %}
                                                     </ul>
                                                 </div>
                                             </div>
