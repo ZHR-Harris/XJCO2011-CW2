@@ -68,6 +68,34 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
+
+@app.route('/dashboard/')
+def dashboard():
+    return render_template('dashboard.html')
+
+
+@app.route('/cart/')
+def cart():
+    return render_template('shopping-cart.html')
+
+
+@app.route('/product-detail/')
+def productdetail():
+    return render_template('product-detail.html')
+
+
+
+@app.route('/wishlist/')
+def wishlist():
+    return u'This is wishlist'
+
+
+@app.route('/checkout/')
+def checkout():
+    return u'This is chechout'
+
+
+
 @app.before_request
 def my_before_request():
     user_id = session.get('user_id')

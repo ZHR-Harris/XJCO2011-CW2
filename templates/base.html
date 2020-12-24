@@ -58,7 +58,7 @@
                                             <div class="nav-inner">
                                                 <!-- BEGIN NAV -->
                                                 <ul id="nav" class="hidden-xs">
-                                                    <li> <a class="level-top" href="#"><span>Home</span></a></li>
+                                                    <li> <a class="level-top" href={{ url_for('index') }}><span>Home</span></a></li>
                                                     <li class="mega-menu"> <a class="level-top"
                                                             href="grid.html"><span>Fruits</span></a>
                                                     </li>
@@ -124,11 +124,8 @@
                                             <div class="no-js"> <a title="Company" class="clicker"></a>
                                                 <div class="fl-nav-links">
                                                     <ul class="links">
-                                                        <li><a href="dashboard.html" title="My Account">My Account</a>
-                                                        </li>
-                                                        <li><a href="wishlist.html" title="Wishlist">Wishlist</a></li>
-                                                        <li><a href="checkout.html" title="Checkout">Checkout</a></li>
-                                                        <li><a href="blog.html" title="Blog"><span>Blog</span></a></li>
+                                                        <li><a href={{url_for('dashboard')}} title="MyAccount"> My Account</a></li>
+                                                        <li><a href={{url_for("wishlist")}} title="Wishlist">Wishlist</a></li>
                                                         {% if user %}
                                                         <li class="last"><a href={{url_for('logout')}}
                                                                  title="Logout"><span>Logout</span></a></li>
@@ -197,10 +194,11 @@
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <div class="actions">
-                                                        <button class="btn-checkout" title="Checkout" type="button"
-                                                            onClick="window.location=checkout.html"><span>Checkout</span></button>
-                                                    </div>
+                                                    <a href={{ url_for('cart') }}>
+                                                        <div class="actions">
+                                                            <button class="btn-checkout" title="Checkout" type="button"><span>Checkout</span></button>
+                                                        </div>
+                                                    </a>
                                                     <!--actions-->
                                                 </div>
                                                 <!--fl-mini-cart-content-->
@@ -354,9 +352,9 @@
                             <div class="col-sm-4 col-xs-12 coppyright"> &copy; 2020 Themesmartgroup. All Rights <a
                                     href="http://www.bootstrapmb.com" title="">reserved</a>. </div>
                             <div class="col-xs-12 col-sm-4">
-                                <div class="payment-accept"> <img src="images/payment-1.png" alt=""> <img
-                                        src="images/payment-2.png" alt=""> <img src="images/payment-3.png" alt=""> <img
-                                        src="images/payment-4.png" alt=""> </div>
+                                <div class="payment-accept"> <img src={{url_for('static', filename = "images/payment-1.png") }} alt=""> <img
+                                        src={{url_for('static', filename = "images/payment-2.png") }} alt=""> <img src={{url_for('static', filename = "images/payment-3.png") }} alt=""> <img
+                                        src={{url_for('static', filename = "images/payment-4.png") }} alt=""> </div>
                             </div>
                         </div>
                     </div>

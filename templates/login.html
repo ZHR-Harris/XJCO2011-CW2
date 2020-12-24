@@ -1,121 +1,137 @@
 ﻿{% extends 'base.html'%}
 {% block title %}
-    <title>login</title>
+<title>login</title>
 {% endblock %}
 
 {% block content %}
-    <div class="top-section">
-        <div class="container">
-            <div class="inside-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="page-heading">
-                                <div class="breadcrumbs">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <ul>
-                                                <li class="home"> <a href="index.html" title="Go to Home Page">Home</a> <span>&rsaquo; </span> </li>
-                                                <li class="category1601"> <strong>Login</strong> </li>
-                                            </ul>
-                                        </div>
-                                        <!--col-xs-12-->
+<div class="top-section">
+    <div class="container">
+        <div class="inside-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="page-heading">
+                            <div class="breadcrumbs">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <ul>
+                                            <li class="home"> <a href="index.html" title="Go to Home Page">Home</a>
+                                                <span>&rsaquo; </span> </li>
+                                            <li class="category1601"> <strong>Login</strong> </li>
+                                        </ul>
                                     </div>
-                                    <!--row-->
+                                    <!--col-xs-12-->
                                 </div>
-                                <div class="page-title">
-                                    <h2>Login</h2>
-                                </div>
+                                <!--row-->
+                            </div>
+                            <div class="page-title">
+                                <h2>Login</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="desc-text">
-                <div class="container">
-                    <p><em>"</em>The way they have decorated the place is just fab..and ..wow. talking of the menu..quite interesting with multiple options.There is something for everyone. The bar menu is equally awesome ....
-                        Overall, I don't think anyone who goes in and come out dissatisfied from this place<em>"</em> <br><span>- Stephen Doe, Happy Customer</span></p>
-                </div>
+    </div>
+    <div class="container">
+        <div class="desc-text">
+            <div class="container">
+                <p><em>"</em>The way they have decorated the place is just fab..and ..wow. talking of the menu..quite
+                    interesting with multiple options.There is something for everyone. The bar menu is equally awesome
+                    ....
+                    Overall, I don't think anyone who goes in and come out dissatisfied from this place<em>"</em>
+                    <br><span>- Stephen Doe, Happy Customer</span></p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- BEGIN Main Container -->
+<!-- BEGIN Main Container -->
 
-    <div class="main-container col1-layout wow bounceInUp animated animated" style="visibility: visible;">
-        <div class="main container">
-            <div class="account-login">
-                <!--page-title-->
+<div class="main-container col1-layout wow bounceInUp animated animated" style="visibility: visible;">
+    <div class="main container">
+        <div class="account-login">
+            <!--page-title-->
 
-                <form action="" method="post" id="login-form">
-                    <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
-                    <fieldset class="col2-set">
-                        <div class="col-1 new-users"> <strong>New Customers</strong>
-                            <div class="content">
-                                <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-                                <br>
-                                <a href="{{ url_for('register') }}">
-                                    <div class="buttons-set">
-                                        <button type="button" title="Create an Account" class="button create-account" onClick=""><span><span>Create an Account</span></span></button>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-2 registered-users"> <strong>Registered Customers</strong>
-                            <div class="content">
-                                <p>If you have an account with us, please log in.</p>
-                                {% if canPass == False %}
-                                <div class="wrong_warning">
-                                    <p>Email or password is wrong. Please confirm before logging in!
-                                    </p>
-                                </div>
-                                {% endif %}
-                                <ul class="form-list">
-                                    <li>
-                                        <label for="email">Email Address<em class="required">*</em></label>
-                                        <div class="input-box">
-                                            <input type="text" required name="login[username]" value="" id="email" class="input-text required-entry validate-email" title="Email Address">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label for="pass">Password<em class="required">*</em></label>
-                                        <div class="input-box">
-                                            <input type="password" required name="login[password]" class="input-text required-entry validate-password" id="pass" title="Password">
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="remember-me-popup">
-                                    <div class="remember-me-popup-head" style="display:none">
-                                        <h3 id="text2">What's this?</h3>
-                                        <a href="#" class="remember-me-popup-close" onClick="showDiv()" title="Close">Close</a> </div>
-                                    <div class="remember-me-popup-body" style="display:none">
-                                        <p id="text1">Checking "Remember Me" will let you access your shopping cart on this computer when you are logged out</p>
-                                        <div class="remember-me-popup-close-button a-right"> <a href="#" class="remember-me-popup-close button" title="Close" onClick="
-            showDiv()"><span>Close</span></a> </div>
-                                    </div>
-                                </div>
-                                <p class="required">* Required Fields</p>
+            <form action="" method="post" id="login-form">
+                <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
+                <fieldset class="col2-set">
+                    <div class="col-1 new-users"> <strong>New Customers</strong>
+                        <div class="content">
+                            <p>By creating an account with our store, you will be able to move through the checkout
+                                process faster, store multiple shipping addresses, view and track your orders in your
+                                account and more.</p>
+                            <br>
+                            <a href="{{ url_for('register') }}">
                                 <div class="buttons-set">
-                                    <button type="submit" class="button login" title="Login" name="send" id="send2"><span>Login</span></button>
-                                    <a href="#" class="forgot-word">Forgot Your Password?</a> </div>
-                                <!--buttons-set-->
-                            </div>
-                            <!--content-->
+                                    <button type="button" title="Create an Account" class="button create-account"
+                                        onClick=""><span><span>Create an Account</span></span></button>
+                                </div>
+                            </a>
                         </div>
-                        <!--col-2 registered-users-->
-                    </fieldset>
-                    <!--col2-set-->
-                </form>
-            </div>
-            <!--account-login-->
-
+                    </div>
+                    <div class="col-2 registered-users"> <strong>Registered Customers</strong>
+                        <div class="content">
+                            <p>If you have an account with us, please log in.</p>
+                            {% if canPass == False %}
+                            <div class="wrong_warning">
+                                <p>Email or password is wrong. Please confirm before logging in!
+                                </p>
+                            </div>
+                            {% endif %}
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Email Address<em class="required">*</em></label>
+                                    <div class="input-box">
+                                        <input type="text" required name="login[username]" value="" id="email"
+                                            class="input-text required-entry validate-email" title="Email Address">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="pass">Password<em class="required">*</em></label>
+                                    <div class="input-box">
+                                        <input type="password" required name="login[password]"
+                                            class="input-text required-entry validate-password" id="pass"
+                                            title="Password">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="remember-me-popup">
+                                <div class="remember-me-popup-head" style="display:none">
+                                    <h3 id="text2">What's this?</h3>
+                                    <a href="#" class="remember-me-popup-close" onClick="showDiv()"
+                                        title="Close">Close</a>
+                                </div>
+                                <div class="remember-me-popup-body" style="display:none">
+                                    <p id="text1">Checking "Remember Me" will let you access your shopping cart on this
+                                        computer when you are logged out</p>
+                                    <div class="remember-me-popup-close-button a-right"> <a href="#"
+                                            class="remember-me-popup-close button" title="Close" onClick="
+            showDiv()"><span>Close</span></a> </div>
+                                </div>
+                            </div>
+                            <p class="required">* Required Fields</p>
+                            <div class="buttons-set">
+                                <button type="submit" class="button login" title="Login" name="send"
+                                    id="send2"><span>Login</span></button>
+                                <a href="#" class="forgot-word">Forgot Your Password?</a>
+                            </div>
+                            <!--buttons-set-->
+                        </div>
+                        <!--content-->
+                    </div>
+                    <!--col-2 registered-users-->
+                </fieldset>
+                <!--col2-set-->
+            </form>
         </div>
-        <!--main-container-->
+        <!--account-login-->
 
     </div>
-    <!--col1-layout-->
+    <!--main-container-->
+
+</div>
+<!--col1-layout-->
 
 
 {% endblock %}
