@@ -3,6 +3,10 @@
 <title>Register</title>
 {% endblock %}
 
+{% block CSS %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheet/passwd-strength.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="top-section">
     <div class="container">
@@ -71,13 +75,19 @@
                     <div class="col-2 registered-users"> <strong>New Customers</strong>
                         <div class="content">
                             <p>If you do not have an account with us, please log in.</p>
-                            {% if canPass == False %}
+                            {% if formatwrong == True %}
                             <div class="wrong_warning">
-                                <p>Two passwords are not equal! please check them before filling them in!
+                                <p>The email format is wrong! Please try again!
                                 </p>
                             </div>
                             {% endif %}
-                            {% if hasRegistered == False %}
+                            {% if canPass == False %}
+                            <div class="wrong_warning">
+                                <p>Two passwords are not equal! Please check them before filling them in!
+                                </p>
+                            </div>
+                            {% endif %}
+                            {% if hasRegistered == True %}
                             <div class="wrong_warning">
                                 <p>The email has been registered. Please change one.
                                 </p>
@@ -94,23 +104,34 @@
                                 <li>
                                     <label for="email">Email Address<em class="required">*</em></label>
                                     <div class="input-box">
-                                        <input type="text" required name="register[email]" value="" id="email"
+                                        <input type="email" required name="register[email]" value="" id="email"
                                             class="input-text required-entry validate-email" title="Email Address">
                                     </div>
                                 </li>
+
                                 <li>
-                                    <label for="pass">Password<em class="required">*</em></label>
+                                    <div>
+                                        <label for="pass">Password<em class="required">*</em></label>
+                                        <div class="eye_icon"></div>
+                                    </div>
                                     <div class="input-box">
                                         <input type="password" required name="register[password1]"
-                                            class="input-text required-entry validate-password" id="pass"
-                                            title="Password1">
+                                            class="input-text required-entry validate-password" oninput="passValidate(this)" id="pass1"
+                                            title="Password1" >
+
                                     </div>
+                                    <ul class="pwdStrength">
+                                        <li class="weak"></li>
+                                        <li class="middle"></li>
+                                        <li class="strong"></li>
+                                        <li class="result"></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <label for="pass">Confirm Password<em class="required">*</em></label>
                                     <div class="input-box">
                                         <input type="password" required name="register[password2]"
-                                            class="input-text required-entry validate-password" id="pass"
+                                            class="input-text required-entry validate-password" id="pass2"
                                             title="Password2">
                                     </div>
                                 </li>
@@ -153,4 +174,8 @@
 <!--col1-layout-->
 
 
+{% endblock %}
+
+{% block JS %}
+    <script type="text/javascript" src={{ url_for('static',filename="js/passwd-strength.js") }}></script>
 {% endblock %}

@@ -27,7 +27,9 @@
             media="all">
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheet/responsive.css') }}"
             media="all">
+        {% block CSS %}
 
+        {% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600,800,400' rel='stylesheet' type='text/css'>
@@ -139,7 +141,7 @@
                                         </div>
                                         <div class="fl-cart-contain">
                                             <div class="mini-cart">
-                                                <div class="basket"> <a href="shopping-cart.html">My Cart</a> </div>
+                                                <div class="basket"> <a href={{ url_for('cart') }}>My Cart</a> </div>
                                                 <div class="fl-mini-cart-content" style="display: none;">
                                                     <div class="block-subtitle">
                                                         <div class="top-subtotal">2 items, <span
@@ -454,13 +456,14 @@
             </div>
         </div>
 
+
+
         <!-- JavaScript -->
         <script type="text/javascript" src={{ url_for('static',filename="js/jquery-3.4.1.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/bootstrap.min.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/common.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/owl.carousel.min.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/jquery.mobile-menu.min.js") }}></script>
-
         {% block JS %}
         {% endblock %}
 

@@ -2,6 +2,11 @@
 {% block title %}
 <title>login</title>
 {% endblock %}
+{% block CSS %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheet/passwd-strength.css') }}">
+
+{% endblock %}
+
 
 {% block content %}
 <div class="top-section">
@@ -83,15 +88,16 @@
                                 <li>
                                     <label for="email">Email Address<em class="required">*</em></label>
                                     <div class="input-box">
-                                        <input type="text" required name="login[username]" value="" id="email"
+                                        <input type="email" required name="login[username]" value="" id="email"
                                             class="input-text required-entry validate-email" title="Email Address">
                                     </div>
                                 </li>
                                 <li>
                                     <label for="pass">Password<em class="required">*</em></label>
+                                    <div class="eye_icon"></div>
                                     <div class="input-box">
                                         <input type="password" required name="login[password]"
-                                            class="input-text required-entry validate-password" id="pass"
+                                            class="input-text required-entry validate-password" id="pass1"
                                             title="Password">
                                     </div>
                                 </li>
@@ -134,4 +140,8 @@
 <!--col1-layout-->
 
 
+{% endblock %}
+
+{% block JS %}
+    <script type="text/javascript" src={{ url_for('static',filename="js/passwd-strength.js") }}></script>
 {% endblock %}

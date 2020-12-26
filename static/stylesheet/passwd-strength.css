@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.eye_icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/open_eye.png');
+    background-repeat: no-repeat;
+    background-position: center content;
+    background-size: cover;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.pwdStrength {
+    width: 80%;
+    list-style: none;
+    height: 30px;
+    display: none;
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+
+.weak,
+.middle,
+.strong {
+    height: 15px;
+    width: 30px;
+    border: 1px solid black;
+    background: rgb(238, 238, 238);
+
+}
+
+.middle {
+    border-left: 0;
+    border-right: 0;
+}
+
+.result {
+    width: 30px;
+    height: 15px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin-left: 10px;
+}

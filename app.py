@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect, session, g
 import config
 from exts import db
 from models import User
+import re
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -25,14 +26,15 @@ def login():
     else:
         email = request.form.get('login[username]')
         password = request.form.get('login[password]')
-        user = User.query.filter(User.email == email, User.password == password).first()
+        user = User.query.filter(User.email == email).first()
         canPass = False
-        if user:
+        if user is not None and user.verify_password(password):
             session['user_id'] = user.id
             # if do not want to log in in 30 days
             session.permanent = True
             return redirect(url_for('index'))
         else:
+            # if the email has been registered, it cannot be registered again
             return render_template('login.html', canPass = canPass)
 
 
@@ -42,13 +44,20 @@ def register():
         return render_template('register.html')
     else:
         email = request.form.get('register[email]')
+        if re.match(r'^[0-9a-zA-Z_]{0,19}@[0-9a-zA-Z]{1,13}\.[com,cn,net]{1,3}$',email):
+            #if re.match(r'[0-9a-zA-Z_]{0,19}@163.com',text):
+            pass
+        else:
+            formatwrong = True
+            return render_template('register.html', formatwrong = formatwrong)
+
         username = request.form.get('register[username]')
         password1 = request.form.get('register[password1]')
         password2 = request.form.get('register[password2]')
         # Mailbox verification, if it is registered, it cannot be registered again
         user = User.query.filter(User.email == email).first()
         if user:
-            hasRegistered = False
+            hasRegistered = True
             return render_template('register.html', hasRegistered = hasRegistered)
         else:
             # password1 must be equal to password2
@@ -99,6 +108,9 @@ def checkout():
     return u'This is chechout'
 
 
+@app.route('/changepassword/')
+def changepassword():
+    return render_template('change-password.html')
 
 @app.before_request
 def my_before_request():
