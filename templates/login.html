@@ -78,12 +78,12 @@
                     <div class="col-2 registered-users"> <strong>Registered Customers</strong>
                         <div class="content">
                             <p>If you have an account with us, please log in.</p>
-                            {% if canPass == False %}
-                            <div class="wrong_warning">
-                                <p>Email or password is wrong. Please confirm before logging in!
-                                </p>
-                            </div>
-                            {% endif %}
+                            {% for message in get_flashed_messages() %}
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
                             <ul class="form-list">
                                 <li>
                                     <label for="email">Email Address<em class="required">*</em></label>
@@ -93,8 +93,9 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <label for="pass">Password<em class="required">*</em></label>
-                                    <div class="eye_icon"></div>
+                                    <div><label for="pass">Password<em class="required">*</em></label>
+                                        <div class="eye_icon"></div></div>
+
                                     <div class="input-box">
                                         <input type="password" required name="login[password]"
                                             class="input-text required-entry validate-password" id="pass1"
@@ -117,6 +118,7 @@
                                 </div>
                             </div>
                             <p class="required">* Required Fields</p>
+                            <p><input type="checkbox" name="remember"> Remember me</p>
                             <div class="buttons-set">
                                 <button type="submit" class="button login" title="Login" name="send"
                                     id="send2"><span>Login</span></button>

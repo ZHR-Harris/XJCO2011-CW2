@@ -1,12 +1,21 @@
-from flask import Flask, render_template, request, url_for, redirect, session, g
+from flask import Flask, render_template, request, url_for, redirect, session, g, flash
 import config
 from exts import db
 from models import User
 import re
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 
 app = Flask(__name__)
 app.config.from_object(config)
 db.init_app(app)
+login_manager = LoginManager()
+login_manager.login_view = 'login'
+login_manager.init_app(app)
+
+
+@login_manager.user_loader
+def load_user(userid):
+    return User.query.get(int(userid))
 
 
 @app.route('/')
@@ -27,15 +36,14 @@ def login():
         email = request.form.get('login[username]')
         password = request.form.get('login[password]')
         user = User.query.filter(User.email == email).first()
-        canPass = False
+        remember = request.form.get('remember')
         if user is not None and user.verify_password(password):
-            session['user_id'] = user.id
-            # if do not want to log in in 30 days
-            session.permanent = True
+            login_user(user, remember=remember)
             return redirect(url_for('index'))
         else:
             # if the email has been registered, it cannot be registered again
-            return render_template('login.html', canPass = canPass)
+            flash('Email or password is wrong. Please confirm before logging in!')
+            return render_template('login.html')
 
 
 @app.route('/register/', methods=['GET', 'POST'])
@@ -48,8 +56,8 @@ def register():
             #if re.match(r'[0-9a-zA-Z_]{0,19}@163.com',text):
             pass
         else:
-            formatwrong = True
-            return render_template('register.html', formatwrong = formatwrong)
+            flash('The email format is wrong! Please try again!')
+            return render_template('register.html')
 
         username = request.form.get('register[username]')
         password1 = request.form.get('register[password1]')
@@ -57,13 +65,13 @@ def register():
         # Mailbox verification, if it is registered, it cannot be registered again
         user = User.query.filter(User.email == email).first()
         if user:
-            hasRegistered = True
-            return render_template('register.html', hasRegistered = hasRegistered)
+            flash('The email has been registered! Please change one.')
+            return render_template('register.html')
         else:
             # password1 must be equal to password2
             if password1 != password2:
-                canPass = False
-                return render_template('register.html', canPass = canPass)
+                flash('Two passwords are not equal! Please check them before filling them in!')
+                return render_template('register.html')
             else:
                 user = User(email=email,username=username,password=password1)
                 db.session.add(user)
@@ -73,17 +81,20 @@ def register():
 
 
 @app.route('/logout/')
+@login_required
 def logout():
-    session.clear()
+    logout_user()
     return redirect(url_for('login'))
 
 
 @app.route('/dashboard/')
+@login_required
 def dashboard():
     return render_template('dashboard.html')
 
 
 @app.route('/cart/')
+@login_required
 def cart():
     return render_template('shopping-cart.html')
 
@@ -99,18 +110,22 @@ def grid():
 
 
 @app.route('/wishlist/')
+@login_required
 def wishlist():
     return u'This is wishlist'
 
 
 @app.route('/checkout/')
+@login_required
 def checkout():
     return u'This is chechout'
 
 
 @app.route('/changepassword/')
+@login_required
 def changepassword():
     return render_template('change-password.html')
+
 
 @app.before_request
 def my_before_request():

@@ -128,7 +128,7 @@
                                                     <ul class="links">
                                                         <li><a href={{url_for('dashboard')}} title="MyAccount"> My Account</a></li>
                                                         <li><a href={{url_for("wishlist")}} title="Wishlist">Wishlist</a></li>
-                                                        {% if user %}
+                                                        {% if current_user.is_authenticated %}
                                                         <li class="last"><a href={{url_for('logout')}}
                                                                  title="Logout"><span>Logout</span></a></li>
                                                         {% else %}
@@ -142,6 +142,7 @@
                                         <div class="fl-cart-contain">
                                             <div class="mini-cart">
                                                 <div class="basket"> <a href={{ url_for('cart') }}>My Cart</a> </div>
+                                                {% if current_user.is_authenticated %}
                                                 <div class="fl-mini-cart-content" style="display: none;">
                                                     <div class="block-subtitle">
                                                         <div class="top-subtotal">2 items, <span
@@ -204,6 +205,7 @@
                                                     <!--actions-->
                                                 </div>
                                                 <!--fl-mini-cart-content-->
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <!--mini-cart-->

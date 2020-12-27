@@ -9,9 +9,10 @@
     height: 20px;
     background-image: url('../images/open_eye.png');
     background-repeat: no-repeat;
-    background-position: center content;
+    background-position: center;
     background-size: cover;
     margin-left: 10px;
+    bottom: -10px;
     display: inline-block;
 }
 
