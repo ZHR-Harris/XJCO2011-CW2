@@ -121,10 +121,39 @@ def checkout():
     return u'This is chechout'
 
 
-@app.route('/changepassword/')
+@app.route('/confirm-password/', methods=['GET', 'POST'])
 @login_required
-def changepassword():
-    return render_template('change-password.html')
+def confirm_password():
+    if request.method == 'GET':
+        return render_template('confirm-password.html')
+    else:
+        passwd = request.form.get('password')
+        user = User.query.filter(User.email == current_user.email).first()
+        if user.verify_password(passwd):
+            return redirect(url_for('change_password'))
+        else:
+            flash('The password is wrong. Please try again!')
+            return render_template('confirm-password.html')
+
+
+
+@app.route('/change-password/', methods=['GET', 'POST'])
+@login_required
+def change_password():
+    if request.method == 'GET':
+        return render_template('change-password.html')
+    else:
+        password1 = request.form.get('password1')
+        password2 = request.form.get('password2')
+        if password1 != password2:
+            flash('Two passwords are not equal! Please check them before filling them in!')
+            return render_template('change-password.html')
+        else:
+            current_user.password = password1
+            db.session.commit()
+            # If the registration is successful, let the page jump to the login page
+            return redirect(url_for('index'))
+
 
 
 @app.before_request

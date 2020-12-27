@@ -60,18 +60,6 @@
             <form action="" method="post" id="login-form">
                 <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
                 <fieldset class="col2-set">
-                    <div class="col-1 new-users"> <strong>Registered Customers</strong>
-                        <div class="content">
-                            <p>If you have an account with us, please log in.</p>
-                            <br>
-                            <a href="{{ url_for('login') }}">
-                                <div class="buttons-set">
-                                    <button type="button" title="Create an Account" class="button create-account"
-                                        onClick=""><span><span>Log in</span></span></button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-2 registered-users"> <strong>New Customers</strong>
                         <div class="content">
                             <p>If you do not have an account with us, please log in.</p>
@@ -143,13 +131,14 @@
                             <div class="buttons-set">
                                 <button type="submit" class="button login" title="Login" name="send"
                                     id="send2"><span>Register</span></button>
-                                {# <a href="#" class="forgot-word">Forgot Your Password?</a>
-                            </div>#}
+                                <span>All ready have an account? <a href={{ url_for('login') }} class="forgot-word"> Click to log in.</a></span>
+                            </div>
                             <!--buttons-set-->
                         </div>
                         <!--content-->
                     </div>
                     <!--col-2 registered-users-->
+                    </div>
                 </fieldset>
                 <!--col2-set-->
             </form>

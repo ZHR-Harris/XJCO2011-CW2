@@ -61,20 +61,6 @@
             <form action="" method="post" id="login-form">
                 <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
                 <fieldset class="col2-set">
-                    <div class="col-1 new-users"> <strong>New Customers</strong>
-                        <div class="content">
-                            <p>By creating an account with our store, you will be able to move through the checkout
-                                process faster, store multiple shipping addresses, view and track your orders in your
-                                account and more.</p>
-                            <br>
-                            <a href="{{ url_for('register') }}">
-                                <div class="buttons-set">
-                                    <button type="button" title="Create an Account" class="button create-account"
-                                        onClick=""><span><span>Create an Account</span></span></button>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-2 registered-users"> <strong>Registered Customers</strong>
                         <div class="content">
                             <p>If you have an account with us, please log in.</p>
@@ -122,7 +108,7 @@
                             <div class="buttons-set">
                                 <button type="submit" class="button login" title="Login" name="send"
                                     id="send2"><span>Login</span></button>
-                                <a href="#" class="forgot-word">Forgot Your Password?</a>
+                                <a href={{ url_for('register') }} class="forgot-word">Free registration</a>
                             </div>
                             <!--buttons-set-->
                         </div>
