@@ -52,6 +52,9 @@ def register():
         return render_template('register.html')
     else:
         email = request.form.get('register[email]')
+        agree = request.form.get('agree')
+        if agree is False:
+            flash('Please agree the terms and conditions.')
         if re.match(r'^[0-9a-zA-Z_]{0,19}@[0-9a-zA-Z]{1,13}\.[com,cn,net]{1,3}$',email):
             #if re.match(r'[0-9a-zA-Z_]{0,19}@163.com',text):
             pass
