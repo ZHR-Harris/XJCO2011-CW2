@@ -79,8 +79,9 @@
               </thead>
               <tfoot>
                 <tr class="first last">
-                  <td colspan="50" class="a-right last"><button type="button" title="Continue Shopping"
-                      class="button btn-continue" onClick=""><span><span>Continue Shopping</span></span></button>
+                  <td colspan="50" class="a-right last">
+                      <a href={{ url_for('grid') }}>
+                          <button type="button" title="Continue Shopping" class="button btn-continue" onClick=""><span><span>Continue Shopping</span></span></button></a>
                     <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart"
                       class="button btn-update"><span><span>Update Cart</span></span></button>
                     <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart"

@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, url_for, redirect, session, g, flash
 import config
 from exts import db
-from models import User
+from models import User, Product
 import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object(config)
+
 db.init_app(app)
 login_manager = LoginManager()
 login_manager.login_view = 'login'
@@ -102,14 +104,16 @@ def cart():
     return render_template('shopping-cart.html')
 
 
-@app.route('/product-detail/')
+@app.route('/product-detail/', methods=['GET','POST'])
 def productdetail():
     return render_template('product-detail.html')
 
 
 @app.route('/grid/')
 def grid():
-    return render_template('grid.html')
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.paginate(per_page = 9, page = page, error_out = False)
+    return render_template('grid.html', products=products)
 
 
 @app.route('/wishlist/')

@@ -20,3 +20,14 @@ class User(UserMixin, db.Model):
 
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+
+class Product(db.Model):
+    __tablename__ = 'Product'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(80),nullable=False)
+    picture_path = db.Column(db.String(100),nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    description = db.Column(db.Text, nullable=True)
+    color = db.Column(db.String(10), nullable=True)
+    size = db.Column(db.String(10), nullable=True)
