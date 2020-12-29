@@ -134,7 +134,7 @@
                                             <div class="item-inner">
                                                 <div class="item-img">
                                                     <div class="item-img-info">
-                                                        <a href="product-detail.html" title="Fresh Organic Mustard Leaves " class="product-image">
+                                                        <a href="{{ url_for('productdetail', product_id = product.id) }}" title="Fresh Organic Mustard Leaves " class="product-image">
                                                             <img src="{{url_for('static', filename=product.picture_path)}}" alt="Fresh Organic Mustard Leaves ">
                                                         </a>
                                                     </div>
@@ -144,8 +144,8 @@
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="info-inner">
-                                                        <div class="item-title"><a href="product-detail.html"
-                                                                                   title="Fresh Organic Mustard Leaves ">{{ product.name }} </a> </div>
+                                                        <div class="item-title"><a href="{{ url_for('productdetail', product_id = product.id) }}"
+                                                                                   title=product.name>{{ product.name }} </a> </div>
                                                         <div class="item-content">
                                                             <div class="rating">
                                                                 <div class="ratings">

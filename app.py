@@ -104,9 +104,11 @@ def cart():
     return render_template('shopping-cart.html')
 
 
-@app.route('/product-detail/', methods=['GET','POST'])
-def productdetail():
-    return render_template('product-detail.html')
+@app.route('/product-detail/<product_id>', methods=['GET','POST'])
+def productdetail(product_id):
+    product = Product.query.filter(Product.id == product_id).first()
+    products = Product.query.all()
+    return render_template('product-detail.html', product = product, products=products)
 
 
 @app.route('/grid/')
