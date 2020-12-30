@@ -1,10 +1,9 @@
-from flask import Flask, render_template, request, url_for, redirect, session, g, flash
+from flask import Flask, render_template, request, url_for, redirect, session, g, flash, jsonify
 import config
 from exts import db
-from models import User, Product
+from models import User, Product, Cart_product, Anonymous
 import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -12,8 +11,8 @@ app.config.from_object(config)
 db.init_app(app)
 login_manager = LoginManager()
 login_manager.login_view = 'login'
+login_manager.anonymous_user = Anonymous
 login_manager.init_app(app)
-
 
 @login_manager.user_loader
 def load_user(userid):
@@ -22,7 +21,8 @@ def load_user(userid):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    products = Product.query.all()
+    return render_template('index.html', products = products)
 
 
 @app.route('/404/')
@@ -104,11 +104,37 @@ def cart():
     return render_template('shopping-cart.html')
 
 
+@app.route('/addcart/', methods=['POST'])
+@login_required
+def add_cart():
+    product_id = request.form.get('add')
+    cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
+    if cart_product:
+        cart_product.number += 1
+        db.session.commit()
+    else:
+        cart_product = Cart_product(user_id=current_user.id, product_id=product_id)
+        db.session.add(cart_product)
+        db.session.commit()
+    # return jsonify({'result': 'success'})
+    return redirect(url_for('grid'))
+
+@app.route('/delete_cart_product/', methods=['POST'])
+@login_required
+def delete_cart_product():
+    product_id = request.form.get('product_id')
+    product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
+    db.session.delete(product)
+    db.session.commit()
+    return jsonify({'result': 'success'})
+
+
 @app.route('/product-detail/<product_id>', methods=['GET','POST'])
 def productdetail(product_id):
     product = Product.query.filter(Product.id == product_id).first()
     products = Product.query.all()
-    return render_template('product-detail.html', product = product, products=products)
+    product_more = products[0:5]
+    return render_template('product-detail.html', product = product, products=products,product_more=product_more)
 
 
 @app.route('/grid/')
@@ -167,18 +193,20 @@ def change_password():
 
 @app.before_request
 def my_before_request():
-    user_id = session.get('user_id')
-    if user_id:
-        user = User.query.filter(User.id == user_id).first()
-        if user:
-            g.user = user
+    cart_products = Cart_product.query.filter(Cart_product.user_id == current_user.id).all()
+    g.cart_products_num = Cart_product.query.filter(Cart_product.user_id == current_user.id).count()
+    g.cart_products = cart_products
+    total_price = 0
+    for cart_product in cart_products:
+        total_price += cart_product.number * cart_product.product.price
+    g.total_price = total_price
 
 
-@app.context_processor
-def my_context_processor():
-    if hasattr(g, 'user'):
-        return {'user': g.user}
-    return {}
+# @app.context_processor
+# def my_context_processor():
+#     if hasattr(g, 'user'):
+#         return {'user': g.user}
+#     return {}
 
 
 if __name__ == '__main__':

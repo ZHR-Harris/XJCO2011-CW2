@@ -61,77 +61,13 @@
                         <div class="slider-items-products">
                             <div id="top-categories" class="product-flexslider hidden-buttons">
                                 <div class="slider-items slider-width-col4 products-grid">
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p1.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Fruits</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p1.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Salads</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p2.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Vegetables</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p3.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Juices‎</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p4.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Cabbage</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p5.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Lettuce</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p6.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Citrus‎‎</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p7.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Berries</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p8.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Carrots</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <!-- Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p9.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Pomegranates</div>
-                                        </div>
-                                    </a> </div>
-                                    <!-- End Item -->
-                                    <div class="item"> <a href="#">
-                                        <div class="pro-img"><img src="{{url_for('static',filename='products-images/p10.jpg') }}" alt="Fresh Organic Mustard Leaf ">
-                                            <div class="pro-info">Leafy Veg</div>
-                                        </div>
-                                    </a> </div>
+                                    {% for product in products[0:11] %}
+                                        <div class="item"> <a href="{{url_for('productdetail', product_id = product.id)}}">
+                                            <div class="pro-img"><img src="{{url_for('static',filename=product.picture_path) }}" alt="{{product.name}}">
+                                                <div class="pro-info">{{ product.name }}</div>
+                                            </div>
+                                        </a> </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -150,190 +86,39 @@
                 </div>
                 <div id="best-seller" class="product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col4 products-grid">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p27.jpg') }}" alt="sample dish"></a>
-                                        <div class="new-label new-top-left">Hot</div>
-                                        <div class="sale-label sale-top-left">-15%</div>
+                        {% for product in products[11:16] %}
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                        <div class="item-img-info"><a href="{{ url_for('productdetail', product_id = product.id) }}" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename=product.picture_path) }}" alt="sample dish"></a>
+                                        </div>
+                                        <form action="{{ url_for('add_cart')}}" method="post">
+                                            <div class="add_cart">
+                                                <button class="button btn-cart"  type="submit" value={{product.id}} name='add'><span>Add to Cart</span></button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf </a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                            <div class="item-title"><a href="{{ url_for('productdetail', product_id = product.id) }}" title="Fresh Organic Mustard Leaf">{{ product.name }} </a> </div>
+                                            <div class="rating">
+                                                <div class="ratings">
+                                                    <div class="rating-box">
+                                                        <div class="rating" style="width:80%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-content">
+                                                <div class="item-price">
+                                                    <div class="price-box"><span class="regular-price" ><span class="price">${{ product.price }}</span> </span> </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
                                     </div>
+                                    <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
                                 </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
                             </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p17.jpg') }}" alt="sample dish"></a> </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf</a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p7.jpg') }}" alt="sample dish"></a> </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf </a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p26.jpg') }}" alt="sample dish"></a> </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf </a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p6.jpg') }}" alt="sample dish"></a> </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf </a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename='products-images/p5.jpg') }}" alt="sample dish"></a> </div>
-                                    <div class="add_cart">
-                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"><a href="product-detail.html" title="Fresh Organic Mustard Leaf">Fresh Organic Mustard Leaf </a> </div>
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating" style="width:80%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-content">
-                                            <div class="item-price">
-                                                <div class="price-box"><span class="regular-price" ><span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i class="fas fa-signal"></i> Compare</a></div>
-                            </div>
-                        </div>
-                        <!-- End Item -->
+                        {% endfor %}
                     </div>
                 </div>
             </div>

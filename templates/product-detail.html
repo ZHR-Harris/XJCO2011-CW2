@@ -16,9 +16,21 @@
                 <div class="product-image">
                     <div class="product-full"> <img id="product-zoom" src={{ url_for('static',
                             filename=product.picture_path ) }} data-zoom-image={{ url_for('static',
-                            filename=product.picture_path ) }} alt="product-image" /> </div>
-                </div>
-                <!-- end: more-images -->
+                            filename=product.picture_path ) }} alt="product-image" />
+                    </div>
+                    <!-- end: more-images -->
+                    <div class="more-views">
+                        <div class="slider-items-products">
+                            <div id="gallery_01" class="product-flexslider hidden-buttons product-img-thumb">
+                                <div class="slider-items slider-width-col4 block-content">
+                                    {% for product in product_more %}
+                                        <div class="more-views-items"> <a href="#" data-image="{{url_for('static', filename=product.picture_path)}}" data-zoom-image="{{url_for('static', filename=product.picture_path)}}"> <img id="product-zoom0"  src="{{url_for('static', filename=product.picture_path)}}" alt="product-image"/> </a></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
             <!--End For version 1,2,6-->
             <!-- For version 3 -->

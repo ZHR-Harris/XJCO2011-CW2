@@ -418,6 +418,5 @@ jQuery(window).on("load", function() {
                     e("#showSearchTerm").text(s.val()), t()
                 })
             })
-          
     }(jQuery);
 

@@ -138,9 +138,12 @@
                                                             <img src="{{url_for('static', filename=product.picture_path)}}" alt="Fresh Organic Mustard Leaves ">
                                                         </a>
                                                     </div>
-                                                    <div class="add_cart">
-                                                        <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                    </div>
+                                                    <form action="{{ url_for('add_cart')}}" method="post">
+                                                        <div class="add_cart">
+                                                            <button class="button btn-cart" type="submit" value={{product.id}} name='add'><span>Add to Cart</span></button>
+                                                        </div>
+                                                    </form>
+                                                    
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="info-inner">

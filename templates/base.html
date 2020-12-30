@@ -145,57 +145,39 @@
                                                 {% if current_user.is_authenticated %}
                                                 <div class="fl-mini-cart-content" style="display: none;">
                                                     <div class="block-subtitle">
-                                                        <div class="top-subtotal">2 items, <span
-                                                                class="price">$259.99</span> </div>
+                                                        <div class="top-subtotal">{{ g.cart_products_num }} items, <span
+                                                                class="price">${{ g.total_price }}</span> </div>
                                                         <!--top-subtotal-->
                                                         <!--pull-right-->
                                                     </div>
                                                     <!--block-subtitle-->
                                                     <ul class="mini-products-list" id="cart-sidebar">
-                                                        <li class="item first">
-                                                            <div class="item-inner"><a class="product-image"
-                                                                    title="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White"
-                                                                    href="#l"><img alt="Fresh Organic Mustard Leaf"
-                                                                        src={{ url_for('static',filename="products-images/p6.jpg") }}></a>
-                                                                <div class="product-details">
-                                                                    <div class="access"><a class="btn-remove1"
-                                                                            title="Remove This Item" href="#">Remove</a>
-                                                                        <a class="btn-edit" title="Edit item"
-                                                                            href="#"><i class="icon-pencil"></i><span
-                                                                                class="hidden">Edit item</span></a>
+                                                        {% for cart_product in g.cart_products%}
+                                                            <li class="item first">
+                                                                <div class="item-inner"><a class="product-image"
+                                                                                           title="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White"
+                                                                                           href="{{ url_for('productdetail', product_id = cart_product.product_id) }}"><img alt="Fresh Organic Mustard Leaf"
+                                                                                                          src="{{ url_for('static',filename=cart_product.product.picture_path) }}"></a>
+                                                                    <div class="product-details">
+                                                                        <div class="access">
+                                                                            <a class="btn-remove1" title="Remove This Item" data-product-id = {{ cart_product.product_id }}>Remove</a>
+                                                                            <a class="btn-edit" title="Edit item" href="#">
+                                                                                <i class="icon-pencil"></i>
+                                                                                <span class="hidden">Edit item</span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <!--access-->
+                                                                        <strong>{{ cart_product.number }}</strong> x <span
+                                                                            class="price">${{ cart_product.product.price }}</span>
+                                                                        <p class="product-name"><a href="{{ url_for('productdetail', product_id = cart_product.product_id) }}">{{ cart_product.product.name }}</a>
+                                                                        </p>
                                                                     </div>
-                                                                    <!--access-->
-                                                                    <strong>1</strong> x <span
-                                                                        class="price">$179.99</span>
-                                                                    <p class="product-name"><a
-                                                                            href="product-detail.html">Fresh Organic
-                                                                            Mustard Leaf</a>
-                                                                    </p>
                                                                 </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="item last">
-                                                            <div class="item-inner"><a class="product-image"
-                                                                    title="JP Lizzy Satchel Designer Diaper Bag - Slate Citron"
-                                                                    href="#"><img alt="Fresh Organic Mustard Leaf"
-                                                                        src={{ url_for('static',filename="products-images/p5.jpg") }}></a>
-                                                                <div class="product-details">
-                                                                    <div class="access"><a class="btn-remove1"
-                                                                            title="Remove This Item" href="#">Remove</a>
-                                                                        <a class="btn-edit" title="Edit item"
-                                                                            href="#"><i class="icon-pencil"></i><span
-                                                                                class="hidden">Edit item</span></a>
-                                                                    </div>
-                                                                    <!--access-->
-                                                                    <strong>1</strong> x <span
-                                                                        class="price">$80.00</span>
-                                                                    <p class="product-name"><a
-                                                                            href="product-detail.html">Fresh Organic
-                                                                            Mustard Leaf</a>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </li>
+{#                                                                <script>#}
+{#                                                                    var product_id = {{ cart_product.product_id | tojson }};#}
+{#                                                                </script>#}
+                                                            </li>
+                                                        {% endfor %}
                                                     </ul>
                                                     <a href={{ url_for('cart') }}>
                                                         <div class="actions">
@@ -463,6 +445,7 @@
         <!-- JavaScript -->
         <script type="text/javascript" src={{ url_for('static',filename="js/jquery-3.4.1.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/bootstrap.min.js") }}></script>
+        <script type="text/javascript" src={{ url_for('static',filename="js/ADajax.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/common.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/owl.carousel.min.js") }}></script>
         <script type="text/javascript" src={{ url_for('static',filename="js/jquery.mobile-menu.min.js") }}></script>

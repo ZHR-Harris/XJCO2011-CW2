@@ -1,7 +1,11 @@
 from exts import db
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from flask_login import UserMixin, AnonymousUserMixin
 
+class Anonymous(AnonymousUserMixin):
+    def __init__(self):
+        self.username = 'Guest'
+        self.id = 0
 
 class User(UserMixin, db.Model):
     __tablename__ = 'user'
@@ -31,3 +35,12 @@ class Product(db.Model):
     description = db.Column(db.Text, nullable=True)
     color = db.Column(db.String(10), nullable=True)
     size = db.Column(db.String(10), nullable=True)
+
+
+class Cart_product(db.Model):
+    __tablename__ = 'cart_product'
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey('Product.id'), primary_key=True)
+    number = db.Column(db.Integer, default=1)
+    user = db.relation('User', backref=db.backref('cart_products'))
+    product = db.relation('Product', backref=db.backref('cart_products'))
