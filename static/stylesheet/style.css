@@ -797,7 +797,7 @@ ul#cart-sidebar {
 	text-align: left;
 }
 .mini-products-list .product-details {
-	margin-left: 80px;
+	margin-left: 40px;
 	padding: 0;
 }
 .fl-mini-cart-content .product-details .btn-remove {
@@ -7126,7 +7126,7 @@ button.button.continue:before {
 .col-left .block-cart .block-content ul li .product-details {
 	float: right;
 	margin-left:0;
-	width:72%
+	width:50%
 
 }
 .col-left .block-cart .block-content ul li .product-details .access {
@@ -10127,9 +10127,10 @@ button.button#empty_cart_button:before {
 	margin: 0 !important;
 	outline: medium none;
 	padding: 8px 10px;
-	width: 40px;
+	width: 80px;
 	text-align: center;
 	border-radius: 0px;
+	width: 80px;
 }
 #shopping-cart-table .edit-bnt {
 	float: left;

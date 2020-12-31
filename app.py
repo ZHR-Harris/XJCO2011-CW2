@@ -107,7 +107,8 @@ def cart():
 @app.route('/addcart/', methods=['POST'])
 @login_required
 def add_cart():
-    product_id = request.form.get('add')
+    product_id = request.form.get('product_id')
+    print(product_id)
     cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
     if cart_product:
         cart_product.number += 1
@@ -116,17 +117,34 @@ def add_cart():
         cart_product = Cart_product(user_id=current_user.id, product_id=product_id)
         db.session.add(cart_product)
         db.session.commit()
-    # return jsonify({'result': 'success'})
-    return redirect(url_for('grid'))
+    return jsonify({'result': 'success'})
+    # return redirect(url_for('grid'))
+
 
 @app.route('/delete_cart_product/', methods=['POST'])
 @login_required
 def delete_cart_product():
     product_id = request.form.get('product_id')
+    # print(product_id)
     product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
     db.session.delete(product)
     db.session.commit()
     return jsonify({'result': 'success'})
+
+
+@app.route('/change_product_num/', methods=['POST'])
+@login_required
+def change_product_num():
+    product_id = request.form.get('product_id')
+    number = request.form.get('num')
+    cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
+    cart_product.number = number
+    db.session.commit()
+    cart_products = Cart_product.query.filter(Cart_product.user_id == current_user.id).all()
+    total_price = 0
+    for cart_product in cart_products:
+        total_price += cart_product.number * cart_product.product.price
+    return jsonify({'result': 'success', 'total_price': total_price})
 
 
 @app.route('/product-detail/<product_id>', methods=['GET','POST'])

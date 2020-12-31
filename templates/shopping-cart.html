@@ -80,8 +80,9 @@
               <tfoot>
                 <tr class="first last">
                   <td colspan="50" class="a-right last">
-                      <a href={{ url_for('grid') }}>
-                          <button type="button" title="Continue Shopping" class="button btn-continue" onClick=""><span><span>Continue Shopping</span></span></button></a>
+                    <a href={{ url_for('grid') }}>
+                      <button type="button" title="Continue Shopping" class="button btn-continue"
+                        onClick=""><span><span>Continue Shopping</span></span></button></a>
                     <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart"
                       class="button btn-update"><span><span>Update Cart</span></span></button>
                     <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart"
@@ -90,78 +91,37 @@
                 </tr>
               </tfoot>
               <tbody>
-{#                <tr class="first last odd">#}
-{#                  <td class="image hidden-table"><a href={{url_for('productdetail')}}#}
-{#                      title="Women&#39;s Georgette Animal Print" class="product-image"><img src={{url_for('static',#}
-{#                        filename="products-images/p8.jpg" ) }} width="75" alt="Women&#39;s Georgette Animal Print"></a>#}
-{#                  </td>#}
-{#                  <td>#}
-{#                    <h2 class="product-name"> <a href={{url_for('productdetail')}}>Fresh Organic Mustard Leaf</a> </h2>#}
-{#                  </td>#}
-{#                  <td class="a-center hidden-table"><a href="#" class="edit-bnt" title="Edit item parameters"></a></td>#}
-{#                  <td class="a-right hidden-table"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center movewishlist"><input name="cart[26340][qty]" value="1" size="4" title="Qty"#}
-{#                      class="input-text qty" maxlength="12"></td>#}
-{#                  <td class="a-right movewishlist"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center last"><a href="#" title="Remove item"#}
-{#                      class="button remove-item"><span><span>Remove item</span></span></a></td>#}
-{#                </tr>#}
-{#                <tr class="odd">#}
-{#                  <td class="image hidden-table"><a href={{url_for('productdetail')}}#}
-{#                      title="Women&#39;s Georgette Animal Print" class="product-image"><img src={{url_for('static',#}
-{#                        filename="products-images/p3.jpg" ) }} width="75" alt="Women&#39;s Georgette Animal Print"></a>#}
-{#                  </td>#}
-{#                  <td>#}
-{#                    <h2 class="product-name"> <a href={{url_for('productdetail')}}>Fresh Organic Mustard Leaf</a> </h2>#}
-{#                  </td>#}
-{#                  <td class="a-center hidden-table"><a href="#" class="edit-bnt" title="Edit item parameters"></a></td>#}
-{#                  <td class="a-right hidden-table"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center movewishlist"><input name="cart[26340][qty]" value="1" size="4" title="Qty"#}
-{#                      class="input-text qty" maxlength="12"></td>#}
-{#                  <td class="a-right movewishlist"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center last"><a href="#" title="Remove item"#}
-{#                      class="button remove-item"><span><span>Remove item</span></span></a></td>#}
-{#                </tr>#}
-{#                <tr class="odd">#}
-{#                  <td class="image hidden-table"><a href={{url_for('productdetail')}}#}
-{#                      title="Women&#39;s Georgette Animal Print" class="product-image"><img src={{url_for('static',#}
-{#                        filename="products-images/p1.jpg" ) }} width="75" alt="Women&#39;s Georgette Animal Print"></a>#}
-{#                  </td>#}
-{#                  <td>#}
-{#                    <h2 class="product-name"> <a href={{url_for('productdetail')}}>Fresh Organic Mustard Leaf</a> </h2>#}
-{#                  </td>#}
-{#                  <td class="a-center hidden-table"><a href="#" class="edit-bnt" title="Edit item parameters"></a></td>#}
-{#                  <td class="a-right hidden-table"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center movewishlist"><input name="cart[26340][qty]" value="1" size="4" title="Qty"#}
-{#                      class="input-text qty" maxlength="12"></td>#}
-{#                  <td class="a-right movewishlist"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center last"><a href="#" title="Remove item"#}
-{#                      class="button remove-item"><span><span>Remove item</span></span></a></td>#}
-{#                </tr>#}
-{#                <tr class="last">#}
-{#                  <td class="image hidden-table"><a href={{url_for('productdetail')}}#}
-{#                      title="Women&#39;s Georgette Animal Print" class="product-image"><img src={{url_for('static',#}
-{#                        filename="products-images/p9.jpg" ) }} width="75" alt="Women&#39;s Georgette Animal Print"></a>#}
-{#                  </td>#}
-{#                  <td>#}
-{#                    <h2 class="product-name"> <a href={{url_for('productdetail')}}>Fresh Organic Mustard Leaf</a> </h2>#}
-{#                  </td>#}
-{#                  <td class="a-center hidden-table"><a href="#" class="edit-bnt" title="Edit item parameters"></a></td>#}
-{#                  <td class="a-right hidden-table"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center movewishlist"><input name="cart[26340][qty]" value="1" size="4" title="Qty"#}
-{#                      class="input-text qty" maxlength="12"></td>#}
-{#                  <td class="a-right movewishlist"><span class="cart-price"> <span class="price">$129.00</span> </span>#}
-{#                  </td>#}
-{#                  <td class="a-center last"><a href="#" title="Remove item"#}
-{#                      class="button remove-item"><span><span>Remove item</span></span></a></td>#}
-{#                </tr>#}
+                {% for cart_product in g.cart_products%}
+                <tr>
+                  <td class="image hidden-table">
+                    <a href="{{ url_for('productdetail', product_id = cart_product.product_id) }}"
+                      class="product-image">
+                      <img src="{{url_for('static', filename=cart_product.product.picture_path ) }}" width="75"
+                        alt="Women&#39;s Georgette Animal Print"></a>
+                  </td>
+
+                  <td>
+                    <h2 class="product-name"> <a
+                        href="{{ url_for('productdetail', product_id = cart_product.product_id) }}">{{
+                        cart_product.product.name }}</a> </h2>
+                  </td>
+                  <td class="a-center hidden-table"><a href="#" class="edit-bnt" title="Edit item parameters"></a></td>
+                  <td class="a-right hidden-table"><span class="cart-price"> <span class="price">${{
+                        cart_product.product.price }}</span> </span>
+                  </td>
+                  <td class="a-center movewishlist"><input name="cart[26340][qty]" value={{ cart_product.number }}
+                      size="8" title="Qty" class="input-text qty" maxlength="50" type="number"
+                      oninput="if(value<0)value=0" data-id={{ cart_product.product_id }}></td>
+                  <td class="a-right movewishlist"><span class="cart-price"> <span class="price"
+                        data-price={{cart_product.product.price }}>${{ cart_product.product.price * cart_product.number
+                        }}</span> </span>
+                  </td>
+                  <td class="a-center last">
+                      <a title="Remove item" class="button remove-item cart_remove" data-id = {{ cart_product.product_id }}><span><span>Remove item</span></span>
+                      </a>
+                  </td>
+                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </fieldset>
@@ -557,13 +517,14 @@
                   <tfoot>
                     <tr>
                       <td style="" class="a-left" colspan="1"><strong>Grand Total</strong></td>
-                      <td style="" class="a-right"><strong><span class="price">$129.00</span></strong></td>
+                      <td style="" class="a-right"><strong><span class="price" id="subtotal">${{ g.total_price
+                            }}</span></strong></td>
                     </tr>
                   </tfoot>
                   <tbody>
                     <tr>
                       <td style="" class="a-left" colspan="1"> Subtotal </td>
-                      <td style="" class="a-right"><span class="price">$129.00</span></td>
+                      <td style="" class="a-right"><span class="price" id="grandtotal">${{ g.total_price }}</span></td>
                     </tr>
                   </tbody>
                 </table>

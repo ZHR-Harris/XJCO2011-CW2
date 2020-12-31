@@ -61,14 +61,14 @@
                                 <button
                                     onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;"
                                     class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
-                                <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty"
+                                <input type="text" class="input-text qty" title="Qty" value="1" maxlength="30" id="qty"
                                     name="qty">
                                 <button
                                     onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
                                     class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
                             </div>
                         </div>
-                        <button onclick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart"
+                        <button onclick="add_to_cart()" class="button btn-cart detail_add" title="Add to Cart"
                             type="button">Add to Cart</button>
                     </div>
 
@@ -309,7 +309,7 @@
                         <div class="item">
                             <div class="item-inner">
                                 <div class="item-img">
-                                    <div class="item-img-info"><a href="product-detail.html"
+                                    <div class="item-img-info"><a href="{{ url_for('productdetail', product_id = product.id) }}"
                                                                   title="Fresh Organic Mustard Leaf " class="product-image"><img
                                             src="{{url_for('static', filename = product.picture_path)}}" alt="sample dish"></a> </div>
                                     <div class="add_cart">
@@ -357,6 +357,9 @@
 {% endblock %}
 
 {% block JS %}
+    <script>
+
+    </script>
 <script type="text/javascript" src={{ url_for('static',filename="js/cloud-zoom.js" ) }}></script>
 <script type="text/javascript" src={{ url_for('static',filename="js/jquery.flexslider.js" ) }}></script>
 <!-- JavaScript -->

@@ -167,15 +167,13 @@
                                                                             </a>
                                                                         </div>
                                                                         <!--access-->
-                                                                        <strong>{{ cart_product.number }}</strong> x <span
-                                                                            class="price">${{ cart_product.product.price }}</span>
+                                                                        <span id="nav_cart_num"><strong>{{ cart_product.number }}</strong></span>
+                                                                        x
+                                                                        <span class="price">${{ cart_product.product.price }}</span>
                                                                         <p class="product-name"><a href="{{ url_for('productdetail', product_id = cart_product.product_id) }}">{{ cart_product.product.name }}</a>
                                                                         </p>
                                                                     </div>
                                                                 </div>
-{#                                                                <script>#}
-{#                                                                    var product_id = {{ cart_product.product_id | tojson }};#}
-{#                                                                </script>#}
                                                             </li>
                                                         {% endfor %}
                                                     </ul>
