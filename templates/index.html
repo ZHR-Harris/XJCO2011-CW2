@@ -92,11 +92,9 @@
                                     <div class="item-img">
                                         <div class="item-img-info"><a href="{{ url_for('productdetail', product_id = product.id) }}" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename=product.picture_path) }}" alt="sample dish"></a>
                                         </div>
-                                        <form action="{{ url_for('add_cart')}}" method="post">
                                             <div class="add_cart">
-                                                <button class="button btn-cart"  type="submit" value={{product.id}} name='add'><span>Add to Cart</span></button>
+                                                <button class="button btn-cart"  type="submit" value={{product.id}} name='add' onclick="add_to_cart($(this))"><span>Add to Cart</span></button>
                                             </div>
-                                        </form>
                                     </div>
                                     <div class="item-info">
                                         <div class="info-inner">
@@ -167,7 +165,7 @@
                                         <div class="item-img-info"><a href="{{ url_for('productdetail', product_id = product.id) }}" title="Fresh Organic Mustard Leaf " class="product-image"><img src="{{url_for('static',filename=product.picture_path) }}" alt="sample dish"></a>
                                         </div>
                                         <div class="add_cart">
-                                            <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
+                                            <button class="button btn-cart" type="button"  onclick="add_to_cart($(this))" value={{ product.id }}><span>Add to Cart</span></button>
                                         </div>
                                     </div>
                                     <div class="item-info">
@@ -278,7 +276,21 @@
 
 {% block JS %}
     <!-- JavaScript -->
-
+    <script>
+        function add_to_cart(data) {
+            var id = data.attr('value');
+            console.log(data.attr('value'));
+            $.ajax({
+                url: '/addcart/',
+                type: 'POST',
+                data: { product_id: id },
+                success: function () {
+                    location.reload();
+                    {#console.log(222);#}
+                }
+            });
+        }
+    </script>
     <script src="{{ url_for('static',filename="js/revslider.js") }}"></script>
     <script src="{{ url_for('static',filename="js/jquery.bxslider.min.js") }}"></script>
     <script src="{{ url_for('static',filename="js/countdown.js") }}"></script>

@@ -53,7 +53,7 @@
   <div class="main container">
     <div class="cart wow bounceInUp animated">
       <div class="table-responsive shopping-cart-tbl  container">
-        <form action="" method="post">
+{#        <form action="" method="post">#}
           <input name="form_key" type="hidden" value="EPYwQxF6xoWcjLUr">
           <fieldset>
             <table id="shopping-cart-table" class="data-table cart-table table-striped">
@@ -83,10 +83,12 @@
                     <a href={{ url_for('grid') }}>
                       <button type="button" title="Continue Shopping" class="button btn-continue"
                         onClick=""><span><span>Continue Shopping</span></span></button></a>
-                    <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart"
-                      class="button btn-update"><span><span>Update Cart</span></span></button>
-                    <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart"
-                      class="button btn-empty" id="empty_cart_button"><span><span>Clear Cart</span></span></button>
+{#                    <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart"#}
+{#                      class="button btn-update"><span><span>Update Cart</span></span></button>#}
+                      <form action="{{ url_for('clear_cart') }}", method="POST">
+                          <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart"
+                            class="button btn-empty" id="empty_cart_button"><span><span>Clear Cart</span></span></button>
+                      </form>
                   </td>
                 </tr>
               </tfoot>
@@ -125,7 +127,7 @@
               </tbody>
             </table>
           </fieldset>
-        </form>
+{#        </form>#}
       </div>
 
       <!-- BEGIN CART COLLATERALS -->

@@ -108,13 +108,18 @@ def cart():
 @login_required
 def add_cart():
     product_id = request.form.get('product_id')
-    print(product_id)
+    product_num = request.form.get('num')
+    if product_num:
+        num = int(product_num)
+    else:
+        num = 1
     cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
     if cart_product:
-        cart_product.number += 1
+        cart_product.number += num
         db.session.commit()
     else:
         cart_product = Cart_product(user_id=current_user.id, product_id=product_id)
+        cart_product.number = num
         db.session.add(cart_product)
         db.session.commit()
     return jsonify({'result': 'success'})
@@ -147,7 +152,7 @@ def change_product_num():
     return jsonify({'result': 'success', 'total_price': total_price})
 
 
-@app.route('/product-detail/<product_id>', methods=['GET','POST'])
+@app.route('/product-detail/<product_id>', methods=['GET', 'POST'])
 def productdetail(product_id):
     product = Product.query.filter(Product.id == product_id).first()
     products = Product.query.all()
@@ -158,8 +163,20 @@ def productdetail(product_id):
 @app.route('/grid/')
 def grid():
     page = request.args.get('page', 1, type=int)
-    products = Product.query.paginate(per_page = 9, page = page, error_out = False)
+    products = Product.query.paginate(per_page=9, page=page, error_out=False)
     return render_template('grid.html', products=products)
+
+
+@app.route('/clear-cart/', methods=['POST'])
+@login_required
+def clear_cart():
+    cart_products = Cart_product.query.filter(Cart_product.user_id == current_user.id).all()
+    for product in cart_products:
+        db.session.delete(product)
+    db.session.commit()
+    # return render_template('shopping-cart.html')
+    return redirect(url_for('cart'))
+
 
 
 @app.route('/wishlist/')
