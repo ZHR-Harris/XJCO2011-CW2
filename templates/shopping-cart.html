@@ -17,7 +17,7 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <ul>
-                      <li class="home"> <a href="index.html" title="Go to Home Page">Home</a> <span>&rsaquo; </span>
+                      <li class="home"> <a href="{{ url_for('index') }}" title="Go to Home Page">Home</a> <span>&rsaquo; </span>
                       </li>
                       <li class="category1601"> <strong>Shopping Cart</strong> </li>
                     </ul>
@@ -563,7 +563,6 @@
 {% endblock %}
 
 {% block JS %}
-<script type="text/javascript" src={{ url_for('static',filename="js/jquery.bxslider.min.js" ) }}></script>
-<script type="text/javascript" src={{ url_for('static',filename="js/jquery.flexslider.js" ) }}></script>
-
+    <script type="text/javascript" src={{ url_for('static',filename="js/jquery.bxslider.min.js" ) }}></script>
+    <script type="text/javascript" src={{ url_for('static',filename="js/jquery.flexslider.js" ) }}></script>
 {% endblock %}

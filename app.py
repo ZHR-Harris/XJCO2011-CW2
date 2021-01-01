@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, url_for, redirect, session, g, flash, jsonify
 import config
 from exts import db
-from models import User, Product, Cart_product, Anonymous
+from models import User, Product, Cart_product, Anonymous, Profile, Address
 import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+import os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -95,7 +97,8 @@ def logout():
 @app.route('/dashboard/')
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
+    return render_template('dashboard.html', current_user = current_user, profile=profile)
 
 
 @app.route('/cart/')
@@ -185,10 +188,35 @@ def wishlist():
     return u'This is wishlist'
 
 
-@app.route('/checkout/')
+@app.route('/profile/')
 @login_required
-def checkout():
-    return u'This is chechout'
+def profile():
+    return render_template('profile.html')
+
+
+@app.route('/editProfile', methods = ['GET', 'POST'])
+def editProfile():
+    if request.method == 'POST':
+        f = request.files['file']
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+        first_Name = request.form.get('firstname')
+        last_Name = request.form.get('lastname')
+        message = request.form.get('lastname')
+        company = request.form.get('company')
+        photo_path = "/upload/" + f.filename
+        profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
+        if profile:
+            profile.first_Name = first_Name
+            profile.last_Name = last_Name
+            profile.message = message
+            profile.company = company
+            profile.photo_path = photo_path
+            db.session.commit()
+        else:
+            profile = Profile(profile_id=current_user.id, first_Name=first_Name, last_Name=last_Name, message=message, company=company, photo_path=photo_path)
+            db.session.add(profile)
+            db.session.commit()
+    return render_template('dashboard.html', profile=profile)
 
 
 @app.route('/confirm-password/', methods=['GET', 'POST'])
