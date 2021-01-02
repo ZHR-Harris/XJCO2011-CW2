@@ -65,7 +65,7 @@
                                                             href={{ url_for('grid') }}><span>Shopping</span></a>
                                                     </li>
                                                     <li class="mega-menu"> <a class="level-top"
-                                                            href="grid.html"><span>Salads‎</span></a>
+                                                            href={{ url_for('dashboard') }}><span>My account</span></a>
                                                     </li>
                                                     <li class="fl-custom-tabmenulink mega-menu"> <a href="#"
                                                             class="level-top">
@@ -120,9 +120,10 @@
                                                 <div class="fl-nav-links">
                                                     <ul class="links">
                                                         <li><a href={{url_for('dashboard')}} title="MyAccount"> My Account</a></li>
-                                                        <li><a href={{url_for("wishlist")}} title="Wishlist">Wishlist</a></li>
                                                         {% if current_user.is_authenticated %}
-                                                        <li class="last"><a href={{url_for('logout')}}
+                                                            <li class="last"><a href={{url_for('change_password')}} title="Logout"><span>Change Password</span></a></li>
+
+                                                            <li class="last"><a href={{url_for('logout')}}
                                                                  title="Logout"><span>Logout</span></a></li>
                                                         {% else %}
                                                         <li class="last"><a href={{url_for('login')}}
@@ -240,8 +241,6 @@
                                     <div class="footer-column">
                                         <h4>Shopping Guide</h4>
                                         <ul class="links">
-                                            <li><a href="blog.html" title="How to buy">Blog</a></li>
-                                            <li><a href="faq.html" title="FAQs">FAQs</a></li>
                                             <li><a href="#" title="Payment">Payment</a></li>
                                             <li><a href="#" title="Shipment">Shipment</a></li>
                                             <li><a href="#" title="Where is my order?">Where is my order?</a></li>
@@ -253,12 +252,10 @@
                                     <div class="footer-column">
                                         <h4>Style Advisor</h4>
                                         <ul class="links">
-                                            <li><a href="login.html" title="Your Account">Your Account</a></li>
+                                            <li><a href="{{ url_for('dashboard') }}" title="Your Account">Your Account</a></li>
                                             <li><a href="#" title="Information">Information</a></li>
                                             <li><a href="#" title="Addresses">Addresses</a></li>
-                                            <li><a href="#" title="Addresses">Discount</a></li>
                                             <li><a href="#" title="Orders History">Orders History</a></li>
-                                            <li><a href="#" title="Order Tracking">Order Tracking</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -266,11 +263,9 @@
                                     <div class="footer-column">
                                         <h4>Information</h4>
                                         <ul class="links">
-                                            <li><a href="sitemap.html" title="Site Map">Site Map</a></li>
                                             <li><a href="#" title="Search Terms">Search Terms</a></li>
                                             <li><a href="#" title="Advanced Search">Advanced Search</a></li>
                                             <li><a href="about_us.html" title="About Us">About Us</a></li>
-                                            <li><a href="contact_us.html" title="Contact Us">Contact Us</a></li>
                                             <li><a href="#" title="Suppliers">Suppliers</a></li>
                                         </ul>
                                     </div>
@@ -284,8 +279,6 @@
                                                 Anytown, CA 12345 USA<br>
                                             </address>
                                             <div class="phone-footer"><i class="phone-icon"></i>+ 888 456-7890</div>
-                                            <div class="email-footer"><i class="email-icon"></i><a
-                                                    href="mailto:abc@example.com">Vmarto@Themesmartgroup.com</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -351,70 +344,22 @@
                     </div>
                 </li>
                 <li>
-                    <div class="home"><a href="#">Home</a> </div>
+                    <div class="home"><a href="{{ url_for('index') }}">Home</a> </div>
                 </li>
-                <li><a href="#">Pages</a>
-                    <ul>
-                        <li><a href="grid.html">Food Grid Page</a></li>
-                        <li> <a href="list.html">Restaurants Grid Page</a></li>
-                        <li> <a href="product-detail.html">Restaurant Detail</a></li>
-                        <li> <a href="shopping-cart.html">Cart Page</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li> <a href="wishlist.html">Wishlist</a></li>
-                        <li> <a href="dashboard.html">Dashboard</a></li>
-                        <li> <a href="about-us.html">About us</a></li>
-                        <li><a href="blog.html">Blog</a>
-                            <ul>
-                                <li><a href="blog-detail.html">Blog Detail</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="404error.html">404 Error Page</a></li>
-                    </ul>
-                </li>
-                <li><a href="grid.html">Restaurants‎‎</a>
-                    <ul>
-                        <li><a href="grid.html">Newly Opened‎</a>
-                        </li>
-                        <li> <a href="grid.html">Upcoming Events‎</a>
-                        </li>
-                        <li> <a href="grid.html">Chinese</a>
-                        </li>
-                        <li> <a href="grid.html">Bars & Pubs</a>
-                        </li>
-                        <li> <a href="grid.html">Rooftop</a>
-                        </li>
-                        <li> <a href="grid.html">Seafood</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="grid.html">Foods‎</a>
-                    <ul>
-                        <li> <a href="grid.html">Seafood</a>
-                        </li>
-                        <li> <a href="grid.html">Fastfood</a>
-                        </li>
-                        <li> <a href="grid.html">Beverages</a>
-                        </li>
-                        <li> <a href="grid.html">Street Food</a>
-                        </li>
-                        <li> <a href="grid.html">Pizza</a>
-                        </li>
-                        <li> <a href="grid.html">Bakery & Cake</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="about-us.html">About Us‎</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
             <div class="top-links">
                 <ul class="links">
-                    <li><a title="My Account" href="login.html">My Account</a> </li>
-                    <li><a title="Wishlist" href="wishlist.html">Wishlist</a> </li>
-                    <li><a title="Checkout" href="checkout.html">Checkout</a> </li>
-                    <li><a title="Blog" href="blog.html">Blog</a> </li>
-                    <li class="last"><a title="Login" href="login.html">Login</a> </li>
+                    <li><a title="My Account" href="{{ url_for('dashboard') }}">My Account</a> </li>
+                    <li><a title="Shopping" href="{{ url_for('grid') }}">Shopping</a> </li>
+                    {% if current_user.is_authenticated %}
+                        <li class="last"><a href={{url_for('change_password')}} title="Logout"><span>Change Password</span></a></li>
+
+                        <li class="last"><a href={{url_for('logout')}}
+                                                    title="Logout"><span>Logout</span></a></li>
+                    {% else %}
+                        <li class="last"><a href={{url_for('login')}}
+                                                    title="Login"><span>Login</span></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
