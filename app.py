@@ -266,7 +266,7 @@ def profile():
     return render_template('profile.html')
 
 
-@app.route('/editProfile', methods = ['GET', 'POST'])
+@app.route('/editProfile', methods = ['POST'])
 def editProfile():
     if request.method == 'POST':
         f = request.files['file']
@@ -288,12 +288,12 @@ def editProfile():
             profile.telephone = telephone
             profile.fax = fax
             db.session.commit()
-            return render_template('dashboard.html')
+            return redirect(url_for('dashboard'))
         else:
             profile = Profile(profile_id=current_user.id, first_Name=first_Name, last_Name=last_Name, message=message, company=company, photo_path=photo_path, telephone=telephone, fax=fax)
             db.session.add(profile)
             db.session.commit()
-            return render_template('dashboard.html')
+            return redirect(url_for('dashboard'))
 
 
 @app.route('/add_address/', methods=['GET', 'POST'])
@@ -314,7 +314,7 @@ def add_address():
         address = Address(user_id=current_user.id, street=street, city=city, province=region, country=country, postcode=postcode, default_address=isdefault)
         db.session.add(address)
         db.session.commit()
-        return render_template('dashboard.html')
+        return redirect(url_for('dashboard'))
 
 
 @app.route('/delete_address/', methods=['POST'])

@@ -153,19 +153,18 @@
                                         </div>
                                         <!--box-title-->
                                         <div class="box-content">
-                                            <p> Name: {{current_user.profile[0].first_Name}}  {{ current_user.profile[0].last_Name}}<br>
+                                            <p> Name: {{profile.first_Name}}  {{ profile.last_Name}}<br>
                                                 Email: {{ current_user.email }}<br>
-                                                Telephone: {{ current_user.profile[0].telephone }}<br>
-                                                {% if current_user.profile[0].fax %}
-                                                Fax: {{ current_user.profile[0].fax }} <br>
+                                                Telephone: {{ profile.telephone }}<br>
+                                                {% if profile.fax %}
+                                                Fax: {{ profile.fax }} <br>
                                                 {% endif %}
-                                                {% if current_user.profile[0].company %}
-                                                Company: {{ current_user.profile[0].company }} <br>
+                                                {% if profile.company %}
+                                                Company: {{ profile.company }} <br>
                                                 {% endif %}
-                                                {% if current_user.profile[0].message %}
-                                                My message: {{ current_user.profile[0].message }} <br>
+                                                {% if profile.message %}
+                                                My message: {{ profile.message }} <br>
                                                 {% endif %}
-
                                                 <a href={{ url_for('confirm_password') }}>Change Password</a>
                                             </p>
                                         </div>
