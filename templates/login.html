@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <p class="required">* Required Fields</p>
-                            <p><input type="checkbox" name="remember"> Remember me</p>
+                            <p id="remember"><input type="checkbox" name="remember" onclick="cookie_remind()"> Remember me</p>
                             <div class="buttons-set">
                                 <button type="submit" class="button login" title="Login" name="send"
                                     id="send2"><span>Login</span></button>
@@ -131,5 +131,11 @@
 {% endblock %}
 
 {% block JS %}
+    <script>
+    function cookie_remind() {
+        var remind = "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Cookie and session will be used if you remember your account!</div>"
+        $('#remember').before(remind);
+    }
+    </script>
     <script type="text/javascript" src={{ url_for('static',filename="js/passwd-strength.js") }}></script>
 {% endblock %}

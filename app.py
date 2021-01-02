@@ -6,6 +6,8 @@ import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 import os
 from werkzeug.utils import secure_filename
+import logging
+
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -15,6 +17,8 @@ login_manager = LoginManager()
 login_manager.login_view = 'login'
 login_manager.anonymous_user = Anonymous
 login_manager.init_app(app)
+
+logging.basicConfig(filename='test.log', level=logging.INFO, format='%(levelname)s:%(message)s')
 
 @login_manager.user_loader
 def load_user(userid):
