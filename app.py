@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, session, g, flash, jsonify
 import config
 from exts import db
-from models import User, Product, Cart_product, Anonymous, Profile, Address
+from models import User, Product, Cart_product, Anonymous, Profile, Address, Review
 import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 import os
@@ -160,13 +160,86 @@ def productdetail(product_id):
     product = Product.query.filter(Product.id == product_id).first()
     products = Product.query.all()
     product_more = products[0:5]
-    return render_template('product-detail.html', product = product, products=products,product_more=product_more)
+    reviews = Review.query.filter(Review.product_id == product_id)
+    review_num = Review.query.filter(Review.product_id == product_id).count()
+    return render_template('product-detail.html', product = product, products=products,product_more=product_more, reviews=reviews, review_num=review_num)
 
 
 @app.route('/grid/')
 def grid():
     page = request.args.get('page', 1, type=int)
     products = Product.query.paginate(per_page=9, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_less100/')
+def sort_less100():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.price < 100).paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_above100/')
+def sort_above100():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.price >= 100).paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_green/')
+def sort_green():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.color == 'green').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_red/')
+def sort_red():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.color == 'red').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_yellow/')
+def sort_yellow():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.color == 'yellow').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_purple/')
+def sort_purple():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.color == 'purple').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_small/')
+def sort_small():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.size == 'Small').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_medium/')
+def sort_medium():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.size == 'Middle').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_large/')
+def sort_large():
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.size == 'Large').paginate(per_page=20, page=page, error_out=False)
+    return render_template('grid.html', products=products)
+
+
+@app.route('/sort_keyword/', methods=['POST'])
+def sort_keyword():
+    keyword = request.form.get('keyword')
+    page = request.args.get('page', 1, type=int)
+    products = Product.query.filter(Product.name.contains(keyword)).paginate(per_page=20, page=page, error_out=False)
     return render_template('grid.html', products=products)
 
 
@@ -179,7 +252,6 @@ def clear_cart():
     db.session.commit()
     # return render_template('shopping-cart.html')
     return redirect(url_for('cart'))
-
 
 
 @app.route('/wishlist/')
@@ -201,9 +273,11 @@ def editProfile():
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
         first_Name = request.form.get('firstname')
         last_Name = request.form.get('lastname')
-        message = request.form.get('lastname')
+        message = request.form.get('message')
         company = request.form.get('company')
-        photo_path = "/upload/" + f.filename
+        telephone = request.form.get('telephone')
+        fax = request.form.get('fax')
+        photo_path = "upload/" + f.filename
         profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
         if profile:
             profile.first_Name = first_Name
@@ -211,12 +285,59 @@ def editProfile():
             profile.message = message
             profile.company = company
             profile.photo_path = photo_path
+            profile.telephone = telephone
+            profile.fax = fax
             db.session.commit()
+            return render_template('dashboard.html')
         else:
-            profile = Profile(profile_id=current_user.id, first_Name=first_Name, last_Name=last_Name, message=message, company=company, photo_path=photo_path)
+            profile = Profile(profile_id=current_user.id, first_Name=first_Name, last_Name=last_Name, message=message, company=company, photo_path=photo_path, telephone=telephone, fax=fax)
             db.session.add(profile)
             db.session.commit()
-    return render_template('dashboard.html', profile=profile)
+            return render_template('dashboard.html')
+
+
+@app.route('/add_address/', methods=['GET', 'POST'])
+def add_address():
+    if request.method == 'GET':
+        return render_template('checkout-billing-info.html')
+    else:
+        street = request.form.get('street')
+        city = request.form.get('city')
+        region = request.form.get('region')
+        postcode = request.form.get('postcode')
+        country = request.form.get('country')
+        radio = request.form.get('inlineRadioOptions')
+        if radio == 'default':
+            isdefault = True
+        else:
+            isdefault = False
+        address = Address(user_id=current_user.id, street=street, city=city, province=region, country=country, postcode=postcode, default_address=isdefault)
+        db.session.add(address)
+        db.session.commit()
+        return render_template('dashboard.html')
+
+
+@app.route('/delete_address/', methods=['POST'])
+def delete_address():
+    address_id = request.form.get('address_id')
+    address = Address.query.filter(Address.address_id == address_id).first()
+    db.session.delete(address)
+    db.session.commit()
+    return jsonify({'result': 'success'})
+
+
+@app.route('/add_review/', methods=['POST'])
+def add_review():
+    product_id = request.form.get('product_id')
+    rating = request.form.get('rating')
+    content = request.form.get('content')
+    review = Review(user_id=current_user.id, rating=rating, content=content, product_id=product_id)
+    db.session.add(review)
+    db.session.commit()
+    return jsonify({'result': 'success'})
+
+@app.route('/orderDetails/', methods=['GET', 'POST'])
+
 
 
 @app.route('/confirm-password/', methods=['GET', 'POST'])
@@ -232,7 +353,6 @@ def confirm_password():
         else:
             flash('The password is wrong. Please try again!')
             return render_template('confirm-password.html')
-
 
 
 @app.route('/change-password/', methods=['GET', 'POST'])

@@ -47,7 +47,7 @@
                     <div class="rating-box">
                         <div style="width:60%" class="rating"></div>
                     </div>
-                    <p class="rating-links"> <a href="#">1 Review</a> <span class="separator">|</span> <a href="#">Add
+                    <p class="rating-links"> <a href="#">{{ review_num + 2 }} Review</a> <span class="separator">|</span> <a href="#">Add
                             Your Review</a> </p>
                 </div>
                 <div class="price-block">
@@ -78,26 +78,6 @@
                     </div>
 
                 </div>
-                <div class="email-addto-box">
-                    <ul class="add-to-links">
-                        <li> <a class="link-wishlist" href="wishlist.html"><span>Add to Wishlist</span></a></li>
-                        <li><span class="separator">|</span> <a class="link-compare"
-                                href="http://themesground.com/vmarto/demo/V1/compare.html"><span>Add to
-                                    Compare</span></a></li>
-                    </ul>
-                    <p class="email-friend"><a href="#" class=""><span>Email to a Friend</span></a></p>
-                </div>
-                <div class="social">
-                    <ul class="link">
-                        <li class="fb"><a href="#"></a></li>
-                        <li class="tw"><a href="#"></a></li>
-                        <li class="googleplus"><a href="#"></a></li>
-                        <li class="rss"><a href="#"></a></li>
-                        <li class="pintrest"><a href="#"></a></li>
-                        <li class="linkedin"><a href="#"></a></li>
-                        <li class="youtube"><a href="#"></a></li>
-                    </ul>
-                </div>
 
                 <ul class="shipping-pro">
                     <li>Free Wordwide Shipping</li>
@@ -126,10 +106,7 @@
                     <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                         <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Product Description
                             </a> </li>
-                        <li><a href="#product_tabs_tags" data-toggle="tab">Tags</a></li>
                         <li> <a href="#reviews_tabs" data-toggle="tab">Reviews</a> </li>
-                        <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
-                        <li> <a href="#product_tabs_custom1" data-toggle="tab">Custom Tab1</a> </li>
                     </ul>
                     <div id="productTabContent" class="tab-content">
                         <div class="tab-pane fade in active" id="product_tabs_description">
@@ -145,31 +122,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="product_tabs_tags">
-                            <div class="box-collateral box-tags">
-                                <div class="tags">
-                                    <form id="addTagForm" action="#" method="get">
-                                        <div class="form-add-tags">
-
-                                            <div class="input-box">
-                                                <input class="input-text" name="productTagName" id="productTagName"
-                                                    type="text" value="enter your tags">
-                                                <button type="button" title="Add Tags" class=" button btn-add"
-                                                    onClick="submitTagForm()"> <span>Add Tags</span> </button>
-                                            </div>
-                                            <!--input-box-->
-                                        </div>
-                                    </form>
-                                </div>
-                                <!--tags-->
-                                <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
-                            </div>
-                        </div>
                         <div class="tab-pane fade in" id="reviews_tabs">
                             <div class="woocommerce-Reviews">
                                 <div>
-                                    <h2 class="woocommerce-Reviews-title">2 reviews for <span>Bacca Bucci Men's Running
-                                            Shoes</span></h2>
+                                    <h2 class="woocommerce-Reviews-title">{{ review_num + 2 }} reviews for <span>{{ product.name }}</span></h2>
                                     <ol class="commentlist">
                                         <li class="comment">
                                             <div>
@@ -222,8 +178,30 @@
                                                 </div>
                                             </div>
                                         </li><!-- #comment-## -->
+                                        {% for review in reviews %}
+                                            <li class="comment">
+                                                <div>
+                                                    <img alt="" src={{ url_for('static', filename=review.author.profile[0].photo_path ) }} class="avatar avatar-60 photo">
+                                                    <div class="comment-text">
+                                                        <div class="ratings">
+                                                            <div class="rating-box">
+                                                                <div style="width:{{ review.rating *100 / 5 }}%" class="rating"></div>
+                                                            </div>
+
+                                                        </div>
+                                                        <p class="meta">
+                                                            <strong>{{review.author.username}}</strong> <span>–</span> {{review.create_time}}
+                                                        </p>
+                                                        <div class="description">
+                                                            <p>{{ review.content }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li><!-- #comment-## -->
+                                        {% endfor %}
                                     </ol>
                                 </div>
+                                {% if current_user.is_authenticated %}
                                 <div>
                                     <div>
                                         <div class="comment-respond">
@@ -236,11 +214,11 @@
                                                     <label id="rating">Your rating</label>
                                                     <p class="stars">
                                                         <span>
-                                                            <a class="star-1" href="#">1</a>
-                                                            <a class="star-2" href="#">2</a>
-                                                            <a class="star-3" href="#">3</a>
-                                                            <a class="star-4" href="#">4</a>
-                                                            <a class="star-5" href="#">5</a>
+                                                            <a class="star-1 s">1</a>
+                                                            <a class="star-2 s">2</a>
+                                                            <a class="star-3 s">3</a>
+                                                            <a class="star-4 s">4</a>
+                                                            <a class="star-5 s">5</a>
                                                         </span>
                                                     </p>
                                                 </div>
@@ -249,47 +227,16 @@
                                                     <textarea id="comment" name="comment" cols="45" rows="8"
                                                         required></textarea>
                                                 </p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Name <span class="required">*</span></label>
-                                                    <input id="author" name="author" type="text" value="" size="30"
-                                                        required>
-                                                </p>
-                                                <p class="comment-form-email">
-                                                    <label for="email">Email <span class="required">*</span></label>
-                                                    <input id="email" name="email" type="email" value="" size="30"
-                                                        required>
-                                                </p>
                                                 <p class="form-submit">
-                                                    <input name="submit" type="submit" id="submit" class="submit"
-                                                        value="Submit">
+                                                    <input name="submit" type="submit" id="add_review" class="submit"
+                                                        value="Submit" data-product-id = {{ product.id }}>
                                                 </p>
                                             </form>
                                         </div><!-- #respond -->
                                     </div>
                                 </div>
+                                {% endif %}
                                 <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="product_tabs_custom">
-                            <div class="product-tabs-content-inner clearfix">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et
-                                    placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi.</p>
-                                <p> Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula
-                                    tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique
-                                    senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at
-                                    sollicitudin rhoncus, ultricies posuere erat. Duis convallis, arcu nec aliquam
-                                    consequat, purus felis vehicula felis, a dapibus enim lorem nec augue.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="product_tabs_custom1">
-                            <div class="product-tabs-content-inner clearfix">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et
-                                    placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras
-                                    neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus,
-                                    in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et
-                                    netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin
-                                    rhoncus, ultricies posuere erat. Duis convallis, arcu nec aliquam consequat, purus
-                                    felis vehicula felis, a dapibus enim lorem nec augue.</p>
                             </div>
                         </div>
                     </div>
@@ -340,8 +287,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="restuarent"><a href="#"><i class="fas fa-heart"></i> Wishlist</a> <a href="#"><i
-                                        class="fas fa-signal"></i> Compare</a></div>
                         </div>
                     </div>
                     <!-- End Item -->

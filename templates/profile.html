@@ -65,7 +65,7 @@
                                             <div class="input-box">
                                                 <label for="shipping:company">Profile photo (jpg or png)</label>
                                                     <br>
-                                                        <input type="file" value="select a photo" name="file" accept=".jpg,.png" />
+                                                        <input required type="file" value="select a photo" name="file" accept=".jpg,.png" />
                                                     <br>
 {#                                                    <input type="submit" value="submit"/>#}
 {#                                                </form>#}
@@ -82,14 +82,14 @@
                                                                     <label for="billing:firstname">First Name<span class="required">*</span></label>
                                                                     <div class="input-box1">
                                                                         <input type="text" id="firstname" name="firstname"
-                                                                               title="First Name" maxlength="255" class="input-text required-entry" required>
+                                                                               title="First Name" maxlength="20" class="input-text required-entry" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="input-box name-lastname">
                                                                     <label for="billing:lastname">Last Name<span class="required">*</span></label>
                                                                     <div class="input-box1">
                                                                         <input type="text" id="lastname" name="lastname"
-                                                                               title="Last Name" maxlength="255" class="input-text required-entry" required>
+                                                                               title="Last Name" maxlength="20" class="input-text required-entry" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -97,16 +97,26 @@
                                                         <li class="wide">
                                                             <label for="message">Write Your Message</label><br>
 
-                                                            <input type="text" title="Street Address" name="message"
-                                                                   id="message" class="input-text  required-entry">
-
+                                                            <textarea type="text" title="Street Address" name="message" id="message" class="input-text  required-entry">
+                                                            </textarea>
                                                         </li>
                                                         <li class="fields">
+                                                            <div class="input-box">
+                                                                <label for="company">Telephone<span class="required">*</span></label>
+
+                                                                <input required type="text" name="telephone" value="" title="Telephone" class="input-text" maxlength="20">
+                                                            </div>
                                                             <div class="input-box">
                                                                 <label for="company">Company</label>
 
                                                                 <input type="text" id="billing:company" name="company" value=""
-                                                                       title="Company" class="input-text ">
+                                                                       title="Company" class="input-text " maxlength="50">
+                                                            </div>
+                                                        </li>
+                                                        <li class="fields">
+                                                            <div class="input-box">
+                                                                <label for="company">Fax</label>
+                                                                <input type="text" name="fax" value="" title="fax" class="input-text " maxlength="30">
                                                             </div>
                                                         </li>
                                                     </ul>

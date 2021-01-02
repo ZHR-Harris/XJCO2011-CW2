@@ -88,10 +88,21 @@
                     </div>
                     <article>
                         <div class="toolbar">
-                            <div class="sorter">
-                                <div class="view-mode"> <span title="Grid"
-                                        class="button button-active button-grid">&nbsp;</span></div>
-                            </div>
+                         <form action="{{ url_for('sort_keyword') }}" role="search" method="post">
+                            <div class="row" style="margin: 20px;">
+                                <div class="col-lg-8">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search by product keyword" name="keyword">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Search</button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </div>
+                            </div><!-- /.row -->
+                             <div class="sorter">
+                                    <div class="view-mode"> <span title="Grid" class="button button-active button-grid">&nbsp;</span></div>
+                             </div>
+                         </form>
                             <div class="sort-by">
                                 <label class="left">Sort By: </label>
                                 <ul>
@@ -176,9 +187,6 @@
                                                                     class="price">${{ product.price }}</span>
                                                             </span> </div>
                                                     </div>
-                                                    <div class="restuarent"><a href="#"><i class="fas fa-heart"></i>
-                                                            Wishlist</a> <a href="#"><i class="fas fa-signal"></i>
-                                                            Compare</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,254 +201,39 @@
             </div>
             <aside class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9 wow bounceInUp animated">
                 <!-- BEGIN SIDE-NAV-CATEGORY -->
-                <div class="side-nav-categories">
-                    <div class="block-title"> Categories </div>
-                    <!--block-title-->
-                    <!-- BEGIN BOX-CATEGORY -->
-                    <div class="box-content box-category">
-                        <ul>
-                            <li> <a class="active" href="grid.html">Fruits</a> <span class="subDropdown minus"></span>
-                                <ul class="level0_415" style="display:block">
-                                    <li> <a href="grid.html"> Tropical Fruits </a> <span
-                                            class="subDropdown plus"></span>
-                                        <ul class="level1" style="display:none">
-                                            <li> <a href="grid.html"><span>Coconuts</span></a> </li>
-                                            <li> <a href="grid.html"><span>Dragonfruits</span></a> </li>
-                                            <li> <a href="grid.html"><span>Pomegranates</span></a> </li>
-                                            <li> <a href="grid.html"><span>Passionfruit</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Citrus Fruits </a> <span class="subDropdown plus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Fresh Oranges</span></a> </li>
-                                            <li> <a href="grid.html"><span>Grapefruits</span></a> </li>
-                                            <li> <a href="grid.html"><span>Organic Limes</span></a> </li>
-                                            <li> <a href="grid.html"><span>Yellow Lemons</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Stone Fruits</a> <span class="subDropdown plus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Sweet Apricots</span></a> </li>
-                                            <li> <a href="grid.html"><span>Nectarines</span></a> </li>
-                                            <li> <a href="grid.html"><span>Doughnut Peachs</span></a> </li>
-                                            <li> <a href="grid.html"><span>Italian Fruits</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Seasonal Fruits </a> <span class="subDropdown plus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Black Jamuns</span></a> </li>
-                                            <li> <a href="grid.html"><span>Fresh Mangos</span></a> </li>
-                                            <li> <a href="grid.html"><span>Organic Litchis</span></a> </li>
-                                            <li> <a href="grid.html"><span>Longans</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <li> <a href="grid.html">Berries &amp; Cherries </a> <span
-                                            class="subDropdown plus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Strawberries</span></a> </li>
-                                            <li> <a href="grid.html"><span>Raspberries</span></a> </li>
-                                            <li> <a href="grid.html"><span>Blackberries</span></a> </li>
-                                            <li> <a href="grid.html"><span>Cherries</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                </ul>
-                                <!--level0-->
-                            </li>
-                            <!--level 0-->
-                            <li> <a href="grid.html">Salads</a> <span class="subDropdown plus"></span>
-                                <ul class="level0_415">
-                                    <li> <a href="grid.html"> Veg Salads </a> <span class="subDropdown minus"></span>
-                                        <ul class="level1" style="display:none">
-                                            <li> <a href="grid.html"><span>Tomatoes</span></a> </li>
-                                            <li> <a href="grid.html"><span>Cucumbers</span></a> </li>
-                                            <li> <a href="grid.html"><span>Peppers &amp; Capsicums</span></a> </li>
-                                            <li> <a href="grid.html"><span>Avocados</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Dressings Salads</a> <span
-                                            class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Hellmann's</span></a> </li>
-                                            <li> <a href="grid.html"><span>Giuseppe Giusti</span></a> </li>
-                                            <li> <a href="grid.html"><span>Unitednature</span></a> </li>
-                                            <li> <a href="grid.html"><span>Walden Farms</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Fruits Salads</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Pineapples</span></a> </li>
-                                            <li> <a href="grid.html"><span>Red Apple</span></a> </li>
-                                            <li> <a href="grid.html"><span>Strawberries</span></a> </li>
-                                            <li> <a href="grid.html"><span>Row Mangos</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Bagged Salads</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Italian Baby Spinach</span></a> </li>
-                                            <li> <a href="grid.html"><span>Australia Green Kale</span></a> </li>
-                                            <li> <a href="grid.html"><span>Sustenir Fresh Toscano</span></a> </li>
-                                            <li> <a href="grid.html"><span>Oro Rocket Salad</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Lettuce Salads</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Butterhead</span></a> </li>
-                                            <li> <a href="grid.html"><span>Red Coral</span></a> </li>
-                                            <li> <a href="grid.html"><span>Rolla Rosa Lettuce</span></a> </li>
-                                            <li> <a href="grid.html"><span>Summercrisp</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Bread Salads</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Green Goddess</span></a> </li>
-                                            <li> <a href="grid.html"><span>Grilled Broccoli</span></a> </li>
-                                            <li> <a href="grid.html"><span>Panzanella</span></a> </li>
-                                            <li> <a href="grid.html"><span>Green Tomato</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                </ul>
-                                <!--level0-->
-                            </li>
-                            <!--level 0-->
-                            <li> <a href="#.html">Vegetables</a> <span class="subDropdown plus"></span>
-                                <ul class="level0_482">
-                                    <li> <a href="grid.html">Leafy Vegetables</a> <span
-                                            class="subDropdown minus"></span>
-                                        <ul class="level1" style="display:none">
-                                            <li> <a href="grid.html"><span>Sprouts</span></a> </li>
-                                            <li> <a href="grid.html"><span>Lettuce</span></a> </li>
-                                            <li> <a href="grid.html"><span>Banana Leaves</span></a> </li>
-                                            <li> <a href="grid.html"><span>Microgreens</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Mushrooms</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Shimeji Mushroom</span></a> </li>
-                                            <li> <a href="grid.html"><span>Portobello Mushroom</span></a> </li>
-                                            <li> <a href="grid.html"><span>Oyster Mushroom</span></a> </li>
-                                            <li> <a href="grid.html"><span>Shiitake Mushroom</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Baby Vegetables</a> <span class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Cabbage</span></a> </li>
-                                            <li> <a href="grid.html"><span>Capsicums</span></a> </li>
-                                            <li> <a href="grid.html"><span>Pak Choi</span></a> </li>
-                                            <li> <a href="grid.html"><span>Spinach</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Salad Vegetables</a> <span
-                                            class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Cucumbers</span></a> </li>
-                                            <li> <a href="grid.html"><span>Avocados</span></a> </li>
-                                            <li> <a href="grid.html"><span>Mustard Leaves</span></a> </li>
-                                            <li> <a href="grid.html"><span>Tomatoes</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Asian Vegetables</a> <span
-                                            class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>Spring Onion</span></a> </li>
-                                            <li> <a href="grid.html"><span>Lady Fingers</span></a> </li>
-                                            <li> <a href="grid.html"><span>Watercress</span></a> </li>
-                                            <li> <a href="grid.html"><span>Curry Leaves</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                    <li> <a href="grid.html">Beans Vegetables</a> <span
-                                            class="subDropdown minus"></span>
-                                        <ul class="level1">
-                                            <li> <a href="grid.html"><span>French Beans</span></a> </li>
-                                            <li> <a href="grid.html"><span>Sweet Corn</span></a> </li>
-                                            <li> <a href="grid.html"><span>Fine Green Beans</span></a> </li>
-                                            <li> <a href="grid.html"><span>Petai Beans</span></a> </li>
-                                        </ul>
-                                        <!--level1-->
-                                    </li>
-                                    <!--level1-->
-                                </ul>
-                                <!--level0-->
-                            </li>
-                            <!--level 0-->
-                            <li> <a href="grid.html">Juices&lrm;</a> </li>
-                            <li> <a href="grid.html">Meats&lrm;</a> </li>
-                            <!--level 0-->
-
-                        </ul>
-                    </div>
-                    <!--box-content box-category-->
-                </div>
                 <!--side-nav-categories-->
                 <div class="block block-layered-nav">
                     <div class="block-title"> Shop By </div>
                     <div class="block-content">
                         <p class="block-subtitle">Shopping Options</p>
-                        <dl id="narrow-by-list">
-                            <dt class="odd">Price</dt>
-                            <dd class="odd">
-                                <ol>
-                                    <li> <a href="#"><span class="price">$0.00</span> - <span
-                                                class="price">$99.99</span></a> (6)
-                                    </li>
-                                    <li> <a href="#"><span class="price">$100.00</span> and above</a> (6) </li>
-                                </ol>
-                            </dd>
-                            <dt class="even">Manufacturer</dt>
-                            <dd class="even">
-                                <ol>
-                                    <li> <a href="#">TheBrand</a> (9) </li>
-                                    <li> <a href="#">Company</a> (4) </li>
-                                    <li> <a href="#">LogoFashion</a> (1) </li>
-                                </ol>
-                            </dd>
-                            <dt class="odd">Color</dt>
-                            <dd class="odd">
-                                <ol>
-                                    <li> <a href="#">Green</a> (1) </li>
-                                    <li> <a href="#">White</a> (5) </li>
-                                    <li> <a href="#">Black</a> (5) </li>
-                                    <li> <a href="#">Gray</a> (4) </li>
-                                    <li> <a href="#">Dark Gray</a> (3) </li>
-                                </ol>
-                            </dd>
-                            <dt class="last even">Size</dt>
-                            <dd class="last even">
-                                <ol>
-                                    <li> <a href="#">Small</a> (6) </li>
-                                    <li> <a href="#">Medium</a> (6) </li>
-                                    <li> <a href="#">Large</a> (4) </li>
-                                </ol>
-                            </dd>
-                        </dl>
+                            <dl id="narrow-by-list">
+                                <dt class="odd">Price</dt>
+                                <dd class="odd">
+                                    <ol>
+                                        <li> <a href="{{ url_for('sort_less100') }}"><span class="price">$0.00</span> - <span
+                                                    class="price">$99.99</span></a>
+                                        </li>
+                                        <li> <a href="{{ url_for('sort_above100') }}"><span class="price">$100.00</span> and above</a></li>
+                                    </ol>
+                                </dd>
+                                <dt class="odd">Color</dt>
+                                <dd class="odd">
+                                    <ol>
+                                        <li> <a href="{{ url_for('sort_green') }}">Green</a> </li>
+                                        <li> <a href="{{ url_for('sort_red') }}">Red</a> </li>
+                                        <li> <a href="{{ url_for('sort_yellow') }}">Yellow</a> </li>
+                                        <li> <a href="{{ url_for('sort_purple') }}">Purple</a> </li>
+                                    </ol>
+                                </dd>
+                                <dt class="last even">Size</dt>
+                                <dd class="last even">
+                                    <ol>
+                                        <li> <a href="{{ url_for('sort_small') }}">Small</a> </li>
+                                        <li> <a href="{{ url_for('sort_medium') }}">Medium</a> </li>
+                                        <li> <a href="{{ url_for('sort_large') }}">Large</a> </li>
+                                    </ol>
+                                </dd>
+                            </dl>
                     </div>
                 </div>
                 <div class="custom-slider">
@@ -531,28 +324,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="block block-compare">
-                    <div class="block-title"> Compare Products </div>
-                    <div class="block-content">
-                        <ol id="compare-items">
-                            <li class="item odd"> <a href="#" class="btn-remove1" onclick="#"></a> <a
-                                    class="product-name" href="#">Fresh Organic Mustard Leaves </a> </li>
-                            <li class="item odd"> <a href="#" class="btn-remove1" onclick="#"></a> <a
-                                    class="product-name" href="#">Fresh Organic Mustard Leaves </a> </li>
-                            <li class="item odd"> <a href="#" class="btn-remove1" onclick="#"></a> <a
-                                    class="product-name" href="#">Fresh Organic Mustard Leaves </a> </li>
-                            <li class="item odd"> <a href="#" class="btn-remove1" onclick="#"></a> <a
-                                    class="product-name" href="#">Fresh Organic Mustard Leaves </a> </li>
-                        </ol>
-                        <div class="ajax-checkout">
-                            <button type="button" title="Compare" class="button button-compare"
-                                onclick="#"><span>Compare</span></button>
-                        </div>
-                        <!--ajax-checkout-->
-                    </div>
-                    <!--block-content-->
-                </div>
-                <!--block block-list block-compare-->
 
             </aside>
             <!--col-right sidebar-->

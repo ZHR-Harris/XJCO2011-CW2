@@ -62,4 +62,37 @@ $(document).ready(function () {
             }
         })
     });
+    $('.delete_address').click(function () {
+        var id = $(this).attr('data-address_id');
+        $.ajax({
+            url: '/delete_address/',
+            type: 'POST',
+            data:{address_id: id},
+            success:function () {
+                $(this).parents('tr').remove();
+                location.reload();
+            }
+        })
+    });
+    $('.s').click(function () {
+        if ($(this).attr('id'))
+            $(this).removeAttr('id')
+        else{
+            $(this).siblings().removeAttr('id');
+            $(this).attr('id', 'star');
+        }
+    });
+    $('#add_review').click(function () {
+        var id = $(this).attr('data-product-id');
+        var content = $('#comment').val();
+        var rating = $('#star').text();
+        $.ajax({
+            url: '/add_review/',
+            type: 'POST',
+            data:{product_id: id, content: content, rating: rating},
+            success:function () {
+                location.reload();
+            }
+        })
+    });
 })

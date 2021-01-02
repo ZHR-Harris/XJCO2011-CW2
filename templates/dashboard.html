@@ -142,7 +142,7 @@
                         <!--recent-orders-->
                         <div class="box-account">
                             <div>
-                                <h2>Account Information</h2>
+                                <h2 style="color: #66cc33;">Account Information</h2>
                             </div>
                             <div class="col2-set">
                                 <div class="col-1">
@@ -153,13 +153,17 @@
                                         </div>
                                         <!--box-title-->
                                         <div class="box-content">
-                                            <p> Name: {{profile.first_Name}}  {{ profile.last_Name}}<br>
+                                            <p> Name: {{current_user.profile[0].first_Name}}  {{ current_user.profile[0].last_Name}}<br>
                                                 Email: {{ current_user.email }}<br>
-                                                {% if profile.company %}
-                                                Company: {{ profile.company }} <br>
+                                                Telephone: {{ current_user.profile[0].telephone }}<br>
+                                                {% if current_user.profile[0].fax %}
+                                                Fax: {{ current_user.profile[0].fax }} <br>
                                                 {% endif %}
-                                                {% if profile.message %}
-                                                My message: {{ profile.message }} <br>
+                                                {% if current_user.profile[0].company %}
+                                                Company: {{ current_user.profile[0].company }} <br>
+                                                {% endif %}
+                                                {% if current_user.profile[0].message %}
+                                                My message: {{ current_user.profile[0].message }} <br>
                                                 {% endif %}
 
                                                 <a href={{ url_for('confirm_password') }}>Change Password</a>
@@ -170,41 +174,48 @@
                                     <!--box-->
                                 </div>
                             </div>
-                            <div class="col2-set">
-                                <div class="box">
-                                    <div class="box-title">
-                                        <h4>Address Book</h4>
-                                        <a href="#">Manage Addresses</a>
-                                    </div>
-                                    <!--box-title-->
-                                    <div class="box-content">
-                                        <div class="col-1">
-                                            <h5>Default Billing Address</h5>
-                                            <address>
-                                                jhon doe<br>
-                                                Street road<br>
-                                                AL, Alabama, 42136<br>
-                                                United States<br>
-                                                T: 4563 <br>
-                                                <a href="#">Edit Address</a>
-                                            </address>
-                                        </div>
-                                        <div class="col-2">
-                                            <h5>Default Shipping Address</h5>
-                                            <address>
-                                                jhon doe<br>
-                                                Street road<br>
-                                                AL, Alabama, 42136<br>
-                                                United States<br>
-                                                T: 4563 <br>
-                                                <a href="#">Edit Address</a>
-                                            </address>
-                                        </div>
-                                    </div>
-                                    <!--box-content-->
-                                </div>
-                                <!--box-->
+                        </div>
+                        <div class="recent-orders">
+                            <div class="title-buttons"> <strong>Multiple addresses</strong><a href="{{ url_for('add_address') }}">Add new addresses</a>
                             </div>
+                            <br>
+
+                            <div class="table-responsive">
+                                <table class="data-table table-striped" id="my-orders-table">
+                                    <colgroup>
+                                        <col width="">
+                                        <col width="">
+                                        <col>
+                                        <col width="1">
+                                        <col width="1">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr class="first last">
+                                        <th>street</th>
+                                        <th>city</th>
+                                        <th>province</th>
+                                        <th><span class="nobr">country</span></th>
+                                        <th>default_address</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for address in current_user.addresses%}
+                                    <tr class="first odd">
+                                        <td>{{address.street}}</td>
+                                        <td><span class="nobr">{{address.city}}</span></td>
+                                        <td>{{address.province}}</td>
+                                        <td><span class="price">{{address.country}}</span></td>
+                                        <td>{{address.postcode}}</td>
+                                        <td class="a-center last"><span class="nobr"> <a class="delete_address"  data-address_id = {{ address.address_id }}>delete</a>
+                                        </span></td>
+                                    </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--table-responsive-->
                         </div>
                     </div>
                 </div>
@@ -216,17 +227,10 @@
                     <div class="block-title"> My Account </div>
                     <div class="block-content">
                         <ul>
-                            <li class="current"><a>Account Dashboard</a></li>
-                            <li><a href="#"><span> Account Information</span></a></li>
-                            <li><a href="#"><span> Address Book</span></a></li>
-                            <li><a href="#"><span> My Orders</span></a></li>
-                            <li><a href="#"><span> Billing Agreements</span></a></li>
-                            <li><a href="#"><span> Recurring Profiles</span></a></li>
-                            <li><a href="#"><span> My Product Reviews</span></a></li>
-                            <li><a href="#"><span> My Wishlist</span></a></li>
-                            <li><a href="#"><span> My Applications</span></a></li>
-                            <li><a href="#"><span> Newsletter Subscriptions</span></a></li>
-                            <li class="last"><a href="#"><span> My Downloadable Products</span></a></li>
+                            <li class="current">Account Dashboard</li>
+                            <li><span> My Orders</span></li>
+                            <li><span> Account Information</span></li>
+                            <li><span> Multiple Addresses</span></li>
                         </ul>
                     </div>
                     <!--block-content-->
@@ -280,8 +284,10 @@
         <!--row-->
     </div>
     <!--main container-->
+
 </section>
 <!--main-container col2-left-layout-->
+
 {% endblock %}
 
 {% block JS %}

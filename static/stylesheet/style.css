@@ -9432,6 +9432,9 @@ button.button.btn-add:before {
 .comment-respond .stars a.star-5:before {
 	content: "\f005\f005\f005\f005\f005";
 }
+#star:before{
+	color: #fed700;
+}
 .woocommerce-Reviews .comment-respond .stars a:hover {
 	color: #fed700;
 }
