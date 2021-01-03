@@ -584,3 +584,397 @@
 2021-01-03 17:48:39,295 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 17:48:39] "[37mGET /static/js/jquery.flexslider.js HTTP/1.1[0m" 200 -
 2021-01-03 17:48:39,382 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 17:48:39] "[37mGET /cart/ HTTP/1.1[0m" 200 -
 2021-01-03 17:48:39,395 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 17:48:39] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-03 20:20:07,850 - INFO - _internal.py - _log - 113 -  * Detected change in '/Users/harris/Desktop/Flask/cw2/XJCO2011-CW2/app.py', reloading
+2021-01-03 20:51:44,996 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:51:44,996 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:51:45,050 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:45] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:51:46,630 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:51:46,630 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:51:46,634 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:46] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:51:46,651 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:51:46,651 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:51:46,654 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:46] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:51:48,346 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:48] "[32mGET /logout/ HTTP/1.1[0m" 302 -
+2021-01-03 20:51:48,360 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:48] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:51:48,487 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:48] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:51:48,497 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:48] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:51:57,898 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:57] "[37mPOST /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:51:57,998 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:57] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:51:58,008 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:51:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,126 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[32mPOST /login/ HTTP/1.1[0m" 302 -
+2021-01-03 20:52:04,138 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:52:04,139 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:52:04,142 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,233 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,237 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p16.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,239 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p14.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,244 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p12.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,247 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p15.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,252 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/slide-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,318 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/js/revslider.js HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,322 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/slide-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,325 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/slide-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,331 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/js/jquery.bxslider.min.js HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,340 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/js/countdown.js HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,390 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,397 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,422 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p4.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,449 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p6.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,455 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p7.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,461 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p5.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,490 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p8.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,509 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p10.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,511 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p9.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,514 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p11.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,545 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p13.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,549 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p17.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,573 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p18.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,583 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p19.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,588 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/products-images/p20.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,600 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/member1.png HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,626 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/member2.png HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,643 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/member3.png HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,645 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/blog-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,645 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/blog-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,665 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET /static/images/blog-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,745 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:52:04,745 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:52:04,748 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:52:04,814 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:52:04,814 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:52:04,818 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:52:06,001 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:06] "[37mGET /static/images/btn_remove.png HTTP/1.1[0m" 200 -
+2021-01-03 20:52:58,415 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:58] "[32mGET /logout/ HTTP/1.1[0m" 302 -
+2021-01-03 20:52:58,423 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:52:58,558 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:52:58,567 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:52:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:53:04,252 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:04] "[37mPOST /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:53:04,335 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:04] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:53:04,345 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:04] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,700 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[32mPOST /login/ HTTP/1.1[0m" 302 -
+2021-01-03 20:53:21,712 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:53:21,712 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:53:21,715 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,811 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p12.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,812 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p15.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,813 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,814 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/images/slide-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,814 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p16.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,816 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p14.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,879 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/js/revslider.js HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,883 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/images/slide-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,887 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/js/jquery.bxslider.min.js HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,888 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/js/countdown.js HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,894 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/images/slide-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,942 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,944 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,952 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p4.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,991 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p5.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,995 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p6.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:21,996 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:21] "[37mGET /static/products-images/p7.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,046 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p8.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,050 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p9.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,051 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p10.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,089 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p11.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,092 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p13.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,092 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p17.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,139 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/left-a.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,140 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p18.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,141 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/right-a.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,144 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p19.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,189 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/products-images/p20.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,192 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/member1.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,194 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/member2.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,198 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/member3.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,240 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/blog-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,244 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/blog-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,245 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/blog-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,247 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/bg-pattern-img.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,295 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/bkg_rating.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,296 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/testimonial-icon.png HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,297 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET /static/images/slider-07.jpg HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,421 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:53:22,421 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:53:22,424 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:53:22,437 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-03 20:53:22,437 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-03 20:53:22,440 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:53:22] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-03 20:55:22,424 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:55:22] "[37mGET /static/images/btn_remove.png HTTP/1.1[0m" 200 -
+2021-01-03 20:55:25,322 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:55:25] "[32mGET /logout/ HTTP/1.1[0m" 302 -
+2021-01-03 20:55:25,329 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:55:25] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:55:25,458 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:55:25] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-03 20:55:25,466 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [03/Jan/2021 20:55:25] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,902 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:18:53,903 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:18:53,908 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,973 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/products-images/p3.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,980 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/products-images/p1.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,981 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/images/slide-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,981 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/images/slide-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,983 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/products-images/p2.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:53,984 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:53] "[37mGET /static/images/slide-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,011 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p4.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,013 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p5.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,014 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p6.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,042 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p9.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,044 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p10.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,045 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p8.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,045 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p7.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,073 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p13.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,073 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p11.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,076 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p12.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,077 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p14.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,106 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p15.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,108 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p16.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,108 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p17.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,110 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p18.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,139 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p20.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,140 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/products-images/p19.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,142 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/member2.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,143 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/member1.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,169 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/blog-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,170 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/member3.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,171 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/blog-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,172 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/blog-img3.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,196 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/js/revslider.js HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,196 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/js/jquery.bxslider.min.js HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,198 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/js/countdown.js HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,572 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/bkg_rating.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,572 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/bg-pattern-img.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,583 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/slider-07.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,584 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/testimonial-icon.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,903 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/right-a.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:54,903 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:54] "[37mGET /static/images/left-a.png HTTP/1.1[0m" 200 -
+2021-01-04 02:18:55,039 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:18:55,039 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:18:55,042 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:55] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:18:55,051 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:18:55,051 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:18:55,054 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:55] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:18:57,896 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:57] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:58,000 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:58,008 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:59,483 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:59] "[37mGET /register/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:59,556 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:59] "[37mGET /register/ HTTP/1.1[0m" 200 -
+2021-01-04 02:18:59,564 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:18:59] "[37mGET /register/ HTTP/1.1[0m" 200 -
+2021-01-04 02:19:58,749 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:19:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:19:58,870 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:19:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:19:58,879 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:19:58] "[37mGET /login/ HTTP/1.1[0m" 200 -
+2021-01-04 02:20:01,263 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:01] "[32mPOST /login/ HTTP/1.1[0m" 302 -
+2021-01-04 02:20:01,277 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:20:01,277 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:20:01,280 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:01] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:20:01,604 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:20:01,605 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:20:01,609 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:01] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:20:01,625 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 02:20:01,625 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 02:20:01,629 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:01] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 02:20:21,479 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:21] "[37mGET /static/images/btn_remove.png HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,358 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,427 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/category-img2.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,438 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/category-img1.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,442 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/slide2.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,443 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/icon_grid_act.png HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,443 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/slide3.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,444 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /static/images/slide1.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,517 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:20:25,540 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:20:25] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:21:50,284 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:21:50] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:21:50,487 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:21:50] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:21:50,506 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:21:50] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:22:03,026 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:03] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:22:03,176 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:03] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:22:03,194 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:03] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:22:10,405 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:10] "[37mPOST /sort_keyword/ HTTP/1.1[0m" 200 -
+2021-01-04 02:22:10,536 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:10] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:22:10,550 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:22:10] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:23:19,916 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:23:19] "[37mPOST /sort_keyword/ HTTP/1.1[0m" 200 -
+2021-01-04 02:23:20,065 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:23:20] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:23:20,080 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:23:20] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:24:37,140 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:37] "[37mPOST /sort_keyword/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:37,258 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:37] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:24:37,270 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:37] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:24:41,798 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:41] "[37mGET /sort_less100/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:41,920 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:41] "[37mGET /sort_less100/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:41,941 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:41] "[37mGET /sort_less100/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:53,193 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:53] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:53,326 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:53] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:24:53,349 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:24:53] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:31,165 - INFO - app.py - add_cart - 151 - In table Cart_product of user id 3, the number of product of id <Cart_product 3, 1> is added. Number is 1
+2021-01-04 02:25:31,166 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:31] "[37mPOST /addcart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:31,192 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:31,316 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:31,341 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:34,282 - INFO - app.py - delete_cart_product - 164 - In table Cart_product of user id 3, the number of product of id 1 is deleted!
+2021-01-04 02:25:34,286 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:34] "[37mPOST /delete_cart_product/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:34,311 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:34,416 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:34,436 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:36,667 - INFO - app.py - delete_cart_product - 164 - In table Cart_product of user id 3, the number of product of id 2 is deleted!
+2021-01-04 02:25:36,670 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:36] "[37mPOST /delete_cart_product/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:36,694 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:36] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:36,798 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:36] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:36,818 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:36] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:39,485 - INFO - app.py - delete_cart_product - 164 - In table Cart_product of user id 3, the number of product of id 12 is deleted!
+2021-01-04 02:25:39,489 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:39] "[37mPOST /delete_cart_product/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:39,513 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:39] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:39,616 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:39] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:39,636 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:39] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:42,576 - INFO - app.py - add_cart - 151 - In table Cart_product of user id 3, the number of product of id <Cart_product 3, 2> is added. Number is 1
+2021-01-04 02:25:42,577 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:42] "[37mPOST /addcart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:42,599 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:42] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:42,753 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:42] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:42,772 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:42] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:25:44,089 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:44] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:25:44,199 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:44] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:25:44,219 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:44] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:25:46,081 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:46] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:25:46,204 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:46] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:25:46,223 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:25:46] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:26:16,676 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:16] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:26:16,817 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:16] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:26:16,838 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:16] "[37mGET /grid/?page=1 HTTP/1.1[0m" 200 -
+2021-01-04 02:26:19,388 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:19] "[37mPOST /sort_keyword/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:19,478 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:19] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:26:19,492 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:19] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:26:22,155 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:22] "[37mPOST /sort_keyword/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:22,248 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:22] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:26:22,261 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:22] "[31m[1mGET /sort_keyword/ HTTP/1.1[0m" 405 -
+2021-01-04 02:26:31,087 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:31,245 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:31,265 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:31] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:34,515 - INFO - app.py - add_cart - 151 - In table Cart_product of user id 3, the number of product of id <Cart_product 3, 1> is added. Number is 1
+2021-01-04 02:26:34,516 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:34] "[37mPOST /addcart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:34,541 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:34,701 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:26:34,723 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:26:34] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:11,630 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:11] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:11,669 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:11] "[37mGET /static/js/jquery.flexslider.js HTTP/1.1[0m" 200 -
+2021-01-04 02:27:11,741 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:11] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:11,756 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:11] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:14,548 - INFO - app.py - change_product_num - 179 - In table Cart_product of user id 3, the number of product of id 2 is changed to 3
+2021-01-04 02:27:14,552 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:14] "[37mPOST /change_product_num/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:14,583 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:14,676 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:27:14,692 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:27:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:32:04,357 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:04] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:32:04,377 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:04] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:32:07,041 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:07] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:32:07,176 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:07] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:32:07,194 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:07] "[37mGET /grid/?page=2 HTTP/1.1[0m" 200 -
+2021-01-04 02:32:11,054 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:11] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:32:11,104 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:11] "[37mGET /static/upload/photo.jpg HTTP/1.1[0m" 200 -
+2021-01-04 02:32:11,109 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:11] "[37mGET /static/js/cloud-zoom.js HTTP/1.1[0m" 200 -
+2021-01-04 02:32:11,217 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:11] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:32:11,240 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:32:11] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:33:43,230 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:33:43] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:33:43,413 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:33:43] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:33:43,438 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:33:43] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:07,302 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:07] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:07,486 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:07] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:07,508 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:07] "[37mGET /product-detail/1 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:10,255 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:10,360 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:10,376 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:13,639 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:13] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:13,783 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:13] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:13,803 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:13] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:15,576 - INFO - app.py - add_cart - 144 - In table Cart_product of user id 3, the number of product of id <Cart_product 3, 1> number add 2
+2021-01-04 02:36:15,577 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:15] "[37mPOST /addcart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:15,603 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:15] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:15,780 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:15] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:15,803 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:15] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:18,378 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:18,473 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:18,488 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:41,409 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:41] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:41,571 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:41] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:41,591 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:41] "[37mGET /grid/ HTTP/1.1[0m" 200 -
+2021-01-04 02:36:47,370 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:47] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:47,536 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:47] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 02:36:47,557 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:36:47] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 02:37:38,048 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:37:38] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:37:38,178 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:37:38] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:37:38,193 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:37:38] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:00,273 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:00] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:00,373 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:00] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:00,385 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:00] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:57,702 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:57] "[32mPOST /confirm-password/ HTTP/1.1[0m" 302 -
+2021-01-04 02:38:57,718 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:57] "[37mGET /change-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:57,824 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:57] "[37mGET /change-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:38:57,838 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:38:57] "[37mGET /change-password/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:02,932 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:02] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:03,028 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:03] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:03,045 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:03] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:17,917 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:17] "[37mGET /profile/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:18,016 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:18] "[37mGET /profile/ HTTP/1.1[0m" 200 -
+2021-01-04 02:39:18,029 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:39:18] "[37mGET /profile/ HTTP/1.1[0m" 200 -
+2021-01-04 02:41:07,482 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:41:07] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:41:07,498 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:41:07] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:42:54,201 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:42:54] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:42:54,330 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:42:54] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:42:54,342 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:42:54] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:42:57,155 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:42:57] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:42:57,172 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:42:57] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:44:05,661 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:44:05] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:44:05,784 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:44:05] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:44:05,797 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:44:05] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 02:44:32,874 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:44:32] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:44:32,890 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:44:32] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:06,549 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:06] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:06,637 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:06] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:06,653 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:06] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:13,183 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:13] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:13,281 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:13] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 02:46:13,297 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 02:46:13] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:04:55,702 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:04:55,702 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:04:55,722 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:04:55] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:04:56,157 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:04:56,158 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:04:56,163 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:04:56] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:04:56,261 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:04:56,261 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:04:56,265 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:04:56] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:05:02,431 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:05:02] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:05:02,553 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:05:02] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:05:02,570 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:05:02] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:05:07,333 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:05:07] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:05:07,353 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:05:07] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:08:37,564 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:08:37] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 03:08:37,800 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:08:37] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 03:08:37,820 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:08:37] "[37mGET /product-detail/2 HTTP/1.1[0m" 200 -
+2021-01-04 03:12:51,196 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:12:51] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 03:12:51,350 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:12:51] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 03:12:51,381 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:12:51] "[37mGET /confirm-password/ HTTP/1.1[0m" 200 -
+2021-01-04 03:27:13,371 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:27:13,372 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:27:13,375 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:27:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:27:13,658 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:27:13,659 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:27:13,662 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:27:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:27:13,858 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:27:13,859 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:27:13,862 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:27:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:30:12,304 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:12] "[33mGET /static/stylesheet/grabbing.png HTTP/1.1[0m" 404 -
+2021-01-04 03:30:12,433 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:12] "[37mGET /product-detail/14 HTTP/1.1[0m" 200 -
+2021-01-04 03:30:12,657 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:12] "[37mGET /product-detail/14 HTTP/1.1[0m" 200 -
+2021-01-04 03:30:12,682 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:12] "[37mGET /product-detail/14 HTTP/1.1[0m" 200 -
+2021-01-04 03:30:30,148 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:30] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:30:30,276 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:30] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:30:30,291 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:30:30] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:34:10,739 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:10] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:34:10,766 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:10] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 03:34:13,224 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:34:13,224 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:34:13,228 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:34:13,494 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:34:13,495 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:34:13,498 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:34:13,511 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 03:34:13,511 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 03:34:13,514 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:13] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 03:34:33,691 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:34:33,821 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 03:34:33,836 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -

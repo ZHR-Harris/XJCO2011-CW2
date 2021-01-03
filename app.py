@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, session, g, flash, jsonify
+from flask import Flask, render_template, request, url_for, redirect, g, flash, jsonify
 import config
 from exts import db
 from models import User, Product, Cart_product, Anonymous, Profile, Address, Review
