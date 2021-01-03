@@ -107,6 +107,8 @@ class Order(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user = db.relation('User', backref=db.backref('orders'))
     products = db.relation('Product', secondary=order_product,backref=db.backref('orders'))
+    destination_id = db.Column(db.Integer, db.ForeignKey('address.address_id'))
+    destination = db.relation('Address', backref=db.backref('orders'))
     create_time = db.Column(db.DateTime, default=datetime.now)
     __table_args__ = {'extend_existing': True}
 

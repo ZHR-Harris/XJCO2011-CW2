@@ -366,9 +366,6 @@ def add_review():
     return jsonify({'result': 'success'})
 
 
-@app.route('/orderDetails/', methods=['GET', 'POST'])
-
-
 
 @app.route('/confirm-password/', methods=['GET', 'POST'])
 @login_required

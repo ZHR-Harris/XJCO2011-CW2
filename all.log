@@ -978,3 +978,106 @@
 2021-01-04 03:34:33,691 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
 2021-01-04 03:34:33,821 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
 2021-01-04 03:34:33,836 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 03:34:33] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:07:57,381 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:07:57,381 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:07:57,389 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:07:57] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 04:07:58,655 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:07:58,655 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:07:58,658 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:07:58] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 04:07:58,674 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:07:58,675 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:07:58,679 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:07:58] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 04:08:10,729 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:08:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:08:10,875 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:08:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:08:10,893 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:08:10] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:15:22,729 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:15:22] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:15:22,745 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:15:22] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:16:55,059 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:16:55] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:16:55,076 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:16:55] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:17:29,484 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:17:29,631 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:17:29,649 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:17:51,821 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:51] "[33mGET /cart/multiple-addresses.html HTTP/1.1[0m" 404 -
+2021-01-04 04:17:53,633 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:53] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:17:53,649 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:17:53] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:22:30,815 - INFO - _internal.py - _log - 113 -  * Detected change in '/Users/harris/Desktop/Flask/cw2/XJCO2011-CW2/models.py', reloading
+2021-01-04 04:22:30,899 - INFO - _internal.py - _log - 113 -  * Restarting with stat
+2021-01-04 04:32:34,628 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:32:34] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:32:34,737 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:32:34] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:32:34,752 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:32:34] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:33:29,654 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:33:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:33:29,795 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:33:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:33:29,815 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:33:29] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:02,742 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:02] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:02,896 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:02] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:02,912 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:02] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:22,119 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:22] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:22,251 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:22] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:34:22,272 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:34:22] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:35:14,525 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:35:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:35:14,684 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:35:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:35:14,702 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:35:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:18,685 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:18,846 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:18,869 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:18] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:55,953 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:55] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:56,092 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:56] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:36:56,112 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:36:56] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:27,593 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:27,700 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/bootstrap.min.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,714 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/owl.carousel.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,722 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/revslider.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,734 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/jquery.bxslider.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,734 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/font-awesome.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,738 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/owl.theme.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,749 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/jquery.mobile-menu.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,756 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/responsive.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,759 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/stylesheet/style.css HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,807 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[36mGET /static/images/dot-repeat.svg HTTP/1.1[0m" 304 -
+2021-01-04 04:42:27,863 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:27,883 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:27] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:29,897 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:29] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:29,997 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:29] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:30,013 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:30] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:33,431 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:33] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:33,519 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:33] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:33,533 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:33] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:35,116 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:35] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:35,132 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:35] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:35,958 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:35] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:42:35,975 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:42:35] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:43:22,398 - INFO - _internal.py - _log - 113 -  * Detected change in '/Users/harris/Desktop/Flask/cw2/XJCO2011-CW2/app.py', reloading
+2021-01-04 04:43:22,478 - INFO - _internal.py - _log - 113 -  * Restarting with stat
+2021-01-04 04:43:24,056 - INFO - _internal.py - _log - 113 -  * Detected change in '/Users/harris/Desktop/Flask/cw2/XJCO2011-CW2/app.py', reloading
+2021-01-04 04:43:24,105 - INFO - _internal.py - _log - 113 -  * Restarting with stat
+2021-01-04 04:43:56,541 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:43:56] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:43:56,672 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:43:56] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:43:56,689 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:43:56] "[37mGET /dashboard/ HTTP/1.1[0m" 200 -
+2021-01-04 04:43:58,164 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:43:58] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:43:58,178 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:43:58] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:09,484 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:09] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:09,604 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:09] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:09,627 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:09] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:11,953 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:11] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:12,042 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:12] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:12,055 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:12] "[37mGET /add_address/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:13,303 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:13] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:44:13,317 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:44:13] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:45:28,551 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:45:28] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:45:28,691 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:45:28] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:45:28,710 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:45:28] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:14,886 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:14] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:15,036 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:15] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:15,057 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:15] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:15,660 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:15] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:15,775 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:15] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:15,791 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:15] "[37mGET /cart/ HTTP/1.1[0m" 200 -
+2021-01-04 04:49:19,670 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:49:19,671 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:49:19,690 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:19] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 04:49:20,088 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:49:20,088 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:49:20,092 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:20] "[37mGET / HTTP/1.1[0m" 200 -
+2021-01-04 04:49:20,160 - DEBUG - app.py - index - 46 - The user ip is 127.0.0.1
+2021-01-04 04:49:20,160 - DEBUG - app.py - index - 48 - The hardware version and browser info is Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+2021-01-04 04:49:20,164 - INFO - _internal.py - _log - 113 - 127.0.0.1 - - [04/Jan/2021 04:49:20] "[37mGET / HTTP/1.1[0m" 200 -
