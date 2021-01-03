@@ -121,7 +121,7 @@
                                                     <ul class="links">
                                                         <li><a href={{url_for('dashboard')}} title="MyAccount"> My Account</a></li>
                                                         {% if current_user.is_authenticated %}
-                                                            <li class="last"><a href={{url_for('change_password')}} title="Logout"><span>Change Password</span></a></li>
+                                                            <li class="last"><a href={{url_for('confirm_password')}} title="Logout"><span>Change Password</span></a></li>
 
                                                             <li class="last"><a href={{url_for('logout')}}
                                                                  title="Logout"><span>Logout</span></a></li>
@@ -213,20 +213,16 @@
                                     <div class="newsletter-wrap">
                                         <h5>Newsletter</h5>
                                         <h4>Get discount 30% off</h4>
-                                        <form action="#" method="post" id="newsletter-validate-detail1">
                                             <div id="container_form_news">
                                                 <div id="container_form_news2">
-                                                    <input type="text" name="email" id="newsletter1"
-                                                        title="Sign up for our newsletter"
-                                                        class="input-text required-entry validate-email"
-                                                        placeholder="Enter your email address">
-                                                    <button type="submit" title="Subscribe"
-                                                        class="button subscribe"><span>Subscribe</span></button>
+                                                    <input type="text" name="email" id="newsletter1" title="Sign up for our newsletter" class="input-text required-entry validate-email" placeholder="Enter your email address">
+                                                    <a href="{{ url_for('grid') }}">
+                                                        <button type="button" title="Subscribe" class="button subscribe"><span>Subscribe</span></button>
+                                                    </a>
                                                 </div>
                                                 <!--container_form_news2-->
                                             </div>
                                             <!--container_form_news-->
-                                        </form>
                                     </div>
                                     <!--newsletter-wrap-->
                                 </div>
@@ -352,7 +348,7 @@
                     <li><a title="My Account" href="{{ url_for('dashboard') }}">My Account</a> </li>
                     <li><a title="Shopping" href="{{ url_for('grid') }}">Shopping</a> </li>
                     {% if current_user.is_authenticated %}
-                        <li class="last"><a href={{url_for('change_password')}} title="Logout"><span>Change Password</span></a></li>
+                        <li class="last"><a href={{url_for('confirm_password')}} title="change_password"><span>Change Password</span></a></li>
 
                         <li class="last"><a href={{url_for('logout')}}
                                                     title="Logout"><span>Logout</span></a></li>

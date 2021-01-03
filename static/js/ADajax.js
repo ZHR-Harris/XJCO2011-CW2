@@ -12,9 +12,7 @@ $(document).ready(function () {
                 // console.log('ppp');
             }
         });
-        // req.done(function () {
-            // location.reload();
-        // })
+
     });
     $('.qty').blur(function () {
         var num = $(this).val();

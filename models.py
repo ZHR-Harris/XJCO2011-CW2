@@ -15,7 +15,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(20), nullable=False)
     username = db.Column(db.String(50), nullable=False) 
     password_hash = db.Column(db.String(100), nullable=False)
-    __table_args__ = {'extend_existing': True}
+    # __table_args__ = {'extend_existing': True}
 
     @property
     def password(self):
@@ -27,6 +27,13 @@ class User(UserMixin, db.Model):
 
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+
+order_product = db.Table('order_product',
+                         db.Column('order_id', db.Integer, db.ForeignKey('order.order_id'), primary_key=True),
+                         db.Column('product_id', db.Integer, db.ForeignKey('Product.id'), primary_key=True),
+                         extend_existing = True
+                         )
 
 
 class Product(db.Model):
@@ -64,7 +71,7 @@ class Profile(db.Model):
     telephone = db.Column(db.String(20), nullable=False)
     fax = db.Column(db.String(30), nullable=True)
     user = db.relation('User', backref=db.backref('profile'))
-    # __table_args__ = {'extend_existing': True}
+    __table_args__ = {'extend_existing': True}
 
 
 class Address(db.Model):
@@ -91,5 +98,17 @@ class Review(db.Model):
     content = db.Column(db.Text, nullable=True)
     rating = db.Column(db.Integer, nullable=False, default=3)
     create_time = db.Column(db.DateTime, default=datetime.now)
+    __table_args__ = {'extend_existing': True}
+
+
+class Order(db.Model):
+    __tablename__ = 'order'
+    order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relation('User', backref=db.backref('orders'))
+    products = db.relation('Product', secondary=order_product,backref=db.backref('orders'))
+    create_time = db.Column(db.DateTime, default=datetime.now)
+    __table_args__ = {'extend_existing': True}
+
 
 

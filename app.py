@@ -7,6 +7,7 @@ from flask_login import LoginManager, login_user, logout_user, login_required, c
 import os
 from werkzeug.utils import secure_filename
 import logging
+from logging.handlers import RotatingFileHandler
 
 
 app = Flask(__name__)
@@ -18,7 +19,20 @@ login_manager.login_view = 'login'
 login_manager.anonymous_user = Anonymous
 login_manager.init_app(app)
 
-logging.basicConfig(filename='test.log', level=logging.INFO, format='%(levelname)s:%(message)s')
+
+# 默认日志等级的设置
+logging.basicConfig(level=logging.DEBUG)
+# 创建日志记录器，指明日志保存路径,每个日志的大小，保存日志的上限
+file_log_handler = RotatingFileHandler('all.log', maxBytes=1024 * 1024, backupCount=10)
+# 设置日志的格式                   发生时间    日志等级     日志信息文件名      函数名          行数        日志信息
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(lineno)s - %(message)s')
+# 将日志记录器指定日志的格式
+file_log_handler.setFormatter(formatter)
+# 日志等级的设置
+# file_log_handler.setLevel(logging.WARNING)
+# 为全局的日志工具对象添加日志记录器
+logging.getLogger().addHandler(file_log_handler)
+
 
 @login_manager.user_loader
 def load_user(userid):
@@ -28,12 +42,11 @@ def load_user(userid):
 @app.route('/')
 def index():
     products = Product.query.all()
+    ip = request.remote_addr # get the ip of the visit
+    app.logger.debug("The user ip is " + ip)
+    version = str(request.user_agent)  # get the hardware and browser version info of the visit
+    app.logger.debug("The hardware version and browser info is " + version)
     return render_template('index.html', products = products)
-
-
-@app.route('/404/')
-def error():
-    return render_template('404error.html')
 
 
 @app.route('/login/', methods=['GET', 'POST'])
@@ -45,6 +58,7 @@ def login():
         password = request.form.get('login[password]')
         user = User.query.filter(User.email == email).first()
         remember = request.form.get('remember')
+        # Keep logging in until the user logs out if remember is True
         if user is not None and user.verify_password(password):
             login_user(user, remember=remember)
             return redirect(url_for('index'))
@@ -94,6 +108,7 @@ def register():
 @app.route('/logout/')
 @login_required
 def logout():
+    # logout will delete the user session
     logout_user()
     return redirect(url_for('login'))
 
@@ -121,14 +136,19 @@ def add_cart():
     else:
         num = 1
     cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
+    # print(Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id))
     if cart_product:
         cart_product.number += num
         db.session.commit()
+        info = "In table Cart_product of user id " + str(current_user.id) + ", the number of product of id " + str(cart_product) + " number add " + str(cart_product.number)
+        app.logger.info(info)
     else:
         cart_product = Cart_product(user_id=current_user.id, product_id=product_id)
         cart_product.number = num
         db.session.add(cart_product)
         db.session.commit()
+        info = "In table Cart_product of user id " + str(current_user.id) + ", the number of product of id " + str(cart_product) + " is added. Number is " + str(cart_product.number)
+        app.logger.info(info)
     return jsonify({'result': 'success'})
     # return redirect(url_for('grid'))
 
@@ -140,6 +160,8 @@ def delete_cart_product():
     # print(product_id)
     product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
     db.session.delete(product)
+    info = "In table Cart_product of user id " + str(current_user.id) + ", the number of product of id " + str(product_id) + " is deleted!"
+    app.logger.info(info)
     db.session.commit()
     return jsonify({'result': 'success'})
 
@@ -153,6 +175,8 @@ def change_product_num():
     cart_product.number = number
     db.session.commit()
     cart_products = Cart_product.query.filter(Cart_product.user_id == current_user.id).all()
+    info = "In table Cart_product of user id " + str(current_user.id) + ", the number of product of id " + str(product_id) + " is changed to " + str(number)
+    app.logger.info(info)
     total_price = 0
     for cart_product in cart_products:
         total_price += cart_product.number * cart_product.product.price
@@ -166,7 +190,8 @@ def productdetail(product_id):
     product_more = products[0:5]
     reviews = Review.query.filter(Review.product_id == product_id)
     review_num = Review.query.filter(Review.product_id == product_id).count()
-    return render_template('product-detail.html', product = product, products=products,product_more=product_more, reviews=reviews, review_num=review_num)
+    profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
+    return render_template('product-detail.html', product = product, products=products,product_more=product_more, reviews=reviews, review_num=review_num, profile=profile)
 
 
 @app.route('/grid/')
@@ -339,6 +364,7 @@ def add_review():
     db.session.add(review)
     db.session.commit()
     return jsonify({'result': 'success'})
+
 
 @app.route('/orderDetails/', methods=['GET', 'POST'])
 

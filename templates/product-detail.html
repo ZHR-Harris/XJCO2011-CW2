@@ -181,7 +181,11 @@
                                         {% for review in reviews %}
                                             <li class="comment">
                                                 <div>
-                                                    <img alt="" src={{ url_for('static', filename=review.author.profile[0].photo_path ) }} class="avatar avatar-60 photo">
+                                                    {% if profile.photo_path %}
+                                                    <img alt="" src={{ url_for('static', filename=profile.photo_path ) }} class="avatar avatar-60 photo">
+                                                    {% else %}
+                                                    <img alt="" src={{ url_for('static', filename="upload/default.jpg" ) }} class="avatar avatar-60 photo">
+                                                    {% endif %}
                                                     <div class="comment-text">
                                                         <div class="ratings">
                                                             <div class="rating-box">
