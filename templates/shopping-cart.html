@@ -135,70 +135,68 @@
       <div class="container">
         <!-- BEGIN COL2 SEL COL 1 -->
         <div class="cart-collaterals">
-{#            <form action="{{  }}"></form>#}
-          <!-- BEGIN TOTALS COL 2 -->
-          <div class="col-sm-8">
-            <div class="shipping">
-              <h3>Choose your shipping address</h3>
-              <div class="shipping-form">
-{#                <form action="" method="post" id="shipping-zip-form">#}
-                  <ul class="form-list">
-                    <li>
-                      <label for="country" class="required"><em>*</em>Address</label>
-                      <div class="input-box">
-                        <select name="country_id" id="country" class="validate-select" title="Country">
-                            {% for address in current_user.addresses %}
-                                <option value="{{ address.id }}">{{ address.street }} {{ address.city }} {{ address.province }} {{ address.country }}</option>
-                            {% endfor %}
-                        </select>
-                      </div>
-                    </li>
-                  </ul>
-{#                </form>#}
+{#            <form action="{{ url_for('add_order') }}" method="post">#}
+              <!-- BEGIN TOTALS COL 2 -->
+              <div class="col-sm-8">
+                <div class="shipping">
+                  <h3>Choose your shipping address</h3>
+                  <div class="shipping-form">
+                      <ul class="form-list">
+                        <li>
+                          <label for="country" class="required"><em>*</em>Address</label>
+                          <div class="input-box">
+                              <select name="address" id="address" class="validate-select" title="address">
+                                {% for address in current_user.addresses %}
+                                    <option value={{ address.id }}>{{ address.street }}, {{ address.city }}, {{ address.province }}, {{ address.country }}</option>
+                                {% endfor %}
+                            </select>
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="col-sm-4">
-            <div class="totals">
-              <h3>Shopping Cart Total</h3>
-              <div class="inner">
-                <table id="shopping-cart-totals-table" class="table shopping-cart-table-total">
-                  <colgroup>
-                    <col>
-                    <col width="1">
-                  </colgroup>
-                  <tfoot>
-                    <tr>
-                      <td style="" class="a-left" colspan="1"><strong>Grand Total</strong></td>
-                      <td style="" class="a-right"><strong><span class="price" id="subtotal">${{ g.total_price
-                            }}</span></strong></td>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td style="" class="a-left" colspan="1"> Subtotal </td>
-                      <td style="" class="a-right"><span class="price" id="grandtotal">${{ g.total_price }}</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <ul class="checkout">
-                  <li>
-                    <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout"
-                      onClick=""><span>Proceed to Checkout</span></button>
-                  </li>
-                  <br>
-                  <li><a href="{{ url_for('add_address') }}" title="Checkout with Multiple Addresses">Checkout with Multiple
-                      Addresses</a> </li>
-                  <br>
-                </ul>
+              <div class="col-sm-4">
+                <div class="totals">
+                  <h3>Shopping Cart Total</h3>
+                  <div class="inner">
+                    <table id="shopping-cart-totals-table" class="table shopping-cart-table-total">
+                      <colgroup>
+                        <col>
+                        <col width="1">
+                      </colgroup>
+                      <tfoot>
+                        <tr>
+                          <td style="" class="a-left" colspan="1"><strong>Grand Total</strong></td>
+                          <td style="" class="a-right"><strong><span class="price" id="subtotal">${{ g.total_price
+                                }}</span></strong></td>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <td style="" class="a-left" colspan="1"> Subtotal </td>
+                          <td style="" class="a-right"><span class="price" id="grandtotal">${{ g.total_price }}</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul class="checkout">
+                      <li>
+                          <button type="submit" title="Proceed to Checkout" class="button btn-proceed-checkout"
+                              name="orderButton" id="checkbutton"><span>Proceed to Checkout</span></button>
+                      </li>
+                      <br>
+                      <li><a href="{{ url_for('add_address') }}" title="Checkout with Multiple Addresses">Checkout with Multiple
+                          Addresses</a> </li>
+                      <br>
+                    </ul>
+                  </div>
+                  <!--inner-->
+                </div>
+                <!--totals-->
               </div>
-              <!--inner-->
-            </div>
-            <!--totals-->
-          </div>
-          <!--col-sm-4-->
-
+              <!--col-sm-4-->
+{#            </form>#}
         </div>
         <!--cart-collaterals-->
 

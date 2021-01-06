@@ -93,4 +93,28 @@ $(document).ready(function () {
             }
         })
     });
+    $('#checkbutton').click(function () {
+        // console.log('111')
+        var address = $('#address option:selected').text();
+        // console.log(address)
+        $.ajax({
+            url: '/add_order/',
+            type: 'POST',
+            data:{address: address},
+            success:function () {
+                location.href='/dashboard/';
+            }
+        })
+    });
+    $('#delete_comment').click(function () {
+        var review_id = $(this).attr('data-review-id');
+        $.ajax({
+            url: '/delete_review/',
+            type: 'POST',
+            data:{review_id: review_id},
+            success:function () {
+                location.reload();
+            }
+        })
+    });
 })

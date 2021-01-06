@@ -105,11 +105,11 @@ class Order(db.Model):
     __tablename__ = 'order'
     order_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    user = db.relation('User', backref=db.backref('orders'))
-    products = db.relation('Product', secondary=order_product,backref=db.backref('orders'))
-    destination_id = db.Column(db.Integer, db.ForeignKey('address.address_id'))
-    destination = db.relation('Address', backref=db.backref('orders'))
+    total_price = db.Column(db.Integer)
+    destination = db.Column(db.String(200))
     create_time = db.Column(db.DateTime, default=datetime.now)
+    user = db.relation('User', backref=db.backref('orders'))
+    products = db.relationship('Product', secondary=order_product, backref=db.backref('orders'))
     __table_args__ = {'extend_existing': True}
 
 

@@ -181,8 +181,8 @@
                                         {% for review in reviews %}
                                             <li class="comment">
                                                 <div>
-                                                    {% if profile.photo_path %}
-                                                    <img alt="" src={{ url_for('static', filename=profile.photo_path ) }} class="avatar avatar-60 photo">
+                                                    {% if review.author.profile[0].photo_path%}
+                                                    <img alt="" src={{ url_for('static', filename=review.author.profile[0].photo_path ) }} class="avatar avatar-60 photo">
                                                     {% else %}
                                                     <img alt="" src={{ url_for('static', filename="upload/default.jpg" ) }} class="avatar avatar-60 photo">
                                                     {% endif %}
@@ -195,6 +195,9 @@
                                                         </div>
                                                         <p class="meta">
                                                             <strong>{{review.author.username}}</strong> <span>–</span> {{review.create_time}}
+                                                            {% if review.user_id == current_user.id %}
+                                                                <a style="float:right;" id="delete_comment" data-review-id={{ review.review_id }}>delete</a>
+                                                            {% endif %}
                                                         </p>
                                                         <div class="description">
                                                             <p>{{ review.content }}</p>

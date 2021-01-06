@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, g, flash, jsonify
 import config
 from exts import db
-from models import User, Product, Cart_product, Anonymous, Profile, Address, Review
+from models import User, Product, Cart_product, Anonymous, Profile, Address, Review, Order
 import re
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 import os
@@ -117,7 +117,8 @@ def logout():
 @login_required
 def dashboard():
     profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
-    return render_template('dashboard.html', current_user = current_user, profile=profile)
+    # orders = Order.query.filter(Order.user_id == current_user.id)
+    return render_template('dashboard.html', current_user=current_user, profile=profile)
 
 
 @app.route('/cart/')
@@ -136,7 +137,6 @@ def add_cart():
     else:
         num = 1
     cart_product = Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id).first()
-    # print(Cart_product.query.filter(Cart_product.product_id == product_id, Cart_product.user_id == current_user.id))
     if cart_product:
         cart_product.number += num
         db.session.commit()
@@ -191,6 +191,7 @@ def productdetail(product_id):
     reviews = Review.query.filter(Review.product_id == product_id)
     review_num = Review.query.filter(Review.product_id == product_id).count()
     profile = Profile.query.filter(Profile.profile_id == current_user.id).first()
+
     return render_template('product-detail.html', product = product, products=products,product_more=product_more, reviews=reviews, review_num=review_num, profile=profile)
 
 
@@ -366,6 +367,26 @@ def add_review():
     return jsonify({'result': 'success'})
 
 
+@app.route('/delete_review/', methods=['POST'])
+def delete_review():
+    review_id = request.form.get('review_id')
+    review = Review.query.filter(Review.review_id == review_id).first()
+    db.session.delete(review)
+    db.session.commit()
+    return jsonify({'result': 'success'})
+
+
+@app.route('/add_order/', methods=['POST'])
+def add_order():
+    address = request.form.get('address')
+    order = Order(user_id=current_user.id, destination=address, total_price = g.total_price)
+    for cart_product in g.cart_products:
+        order.products.append(cart_product.product)
+    db.session.add(order)
+    db.session.commit()
+    return jsonify({'result': 'success'})
+    # return redirect(url_for('dashboard'))
+
 
 @app.route('/confirm-password/', methods=['GET', 'POST'])
 @login_required
@@ -398,7 +419,6 @@ def change_password():
             db.session.commit()
             # If the registration is successful, let the page jump to the login page
             return redirect(url_for('index'))
-
 
 
 @app.before_request
